@@ -287,7 +287,7 @@ h6{
  */
  
 .main-header h1{
-	font-size:3vh;
+	font-size: 1.5rem;
 	color:var(--font);
 	font-weight:normal;
 }

@@ -89,8 +89,7 @@ figure{
 .slide img{
 	max-width:100%;
 	max-height:50vh;
-	margin:auto;
-	margin-bottom:10px;
+	margin: auto auto 10px;
 }
 
 img.center{
@@ -556,14 +555,14 @@ img.center{
 	opacity:0;
 	overflow:auto;
 	padding:0 12%;
-	top:3vh;
+	top: 1.5rem;
 }
 	
 	@media (--small) {
 		.slide{
 			padding:0.5em;
 			hyphens: auto;
-			top:10vh;
+			top: 3rem;
 		}
 	}
 	
@@ -655,7 +654,7 @@ img.center{
 }
 	
 .tool-block-settings fieldset{
-	font-size:3vh;
+	font-size: 1.5rem;
 }
 
 .input-setting,

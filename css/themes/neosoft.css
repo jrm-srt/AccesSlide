@@ -3,13 +3,14 @@ TODO:
 - Font-sizes defined by Access42 are expressed in 'vh', which might not be the best thing...
 */
 body {
-    --neosoft-blue: #05f;
-    --neosoft-dark-blue: #051742;
+    --neosoft-blue: hsl(220deg, 100%, 50%); /*#05f*/
+    --neosoft-dark-blue: hsl(222deg, 86%, 14%); /*#051742*/
     --neosoft-text-on-blue: white;
 
     letter-spacing: 0.1rem;
 
-    b {
+    strong,
+    .strong {
         color: var(--neosoft-blue);
     }
 
@@ -45,18 +46,16 @@ body {
     }
 
     #accessibility-what-3 {
-        .columns-2 {
-            div {
-                display: flex;
-                flex-direction: column;
-            }
-        }
-
         img {
             display: block;
         }
 
+        blockquote {
+            padding-inline: 2rem;
+        }
+
         a {
+            display: block;
             text-align: center;
         }
     }
@@ -70,6 +69,22 @@ body {
     #accessibility-who-2 {
         a {
             display: block;
+        }
+    }
+
+    #law {
+        li {
+            margin-block: 1rem;
+        }
+    }
+
+    #law-3 {
+        li {
+            margin-block: 1rem;
+        }
+
+        cite {
+            margin-top: 0;
         }
     }
 }

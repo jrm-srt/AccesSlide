@@ -1,5 +1,17 @@
 body {
+    --bg-light: hsl(from var(--neosoft-blue) h s calc(l + 40));
     --spacer-size: 2em;
+
+    .bg-light {
+        --padding: 1.5rem;
+
+        background-color: var(--bg-light);
+        padding: var(--padding);
+    }
+
+    ul.bg-light {
+        padding-left: calc(3 * var(--padding));
+    }
 
     .center {
         justify-self: center;
@@ -9,7 +21,7 @@ body {
     .columns-2 {
         align-items: center;
         display: grid;
-        gap: 1rem;
+        gap: 2rem;
         grid-template-columns:  repeat(2, 1fr);
     }
 
@@ -23,6 +35,12 @@ body {
         font-size: 2.25rem;
         margin-top: 2rem;
         text-align: center;
+    }
+
+    /* Cancel the hero style */
+    .anti-hero {
+        color: var(--neosoft-dark-blue);
+        font-family: 'system-ui', 'os-regular', serif;
     }
 
     .icon-text {
