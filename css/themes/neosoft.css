@@ -3,35 +3,56 @@ TODO:
 - Font-sizes defined by Access42 are expressed in 'vh', which might not be the best thing...
 */
 body {
-    --neosoft-blue: #051742;
+    --neosoft-blue: #05f;
+    --neosoft-dark-blue: #051742;
     --neosoft-text-on-blue: white;
 
     letter-spacing: 0.1rem;
 
-    .extra-small {
-        font-size: 60%;
-    }
-
     .couv {
         align-items: center;
-        color: var(--neosoft-blue);
+        color: var(--neosoft-dark-blue);
         display: flex;
         flex-direction:  column;
         justify-content:  center;
 
         h1 {
-            font-weight: bold;
+            margin-bottom: 0.1em;
+            font-family: 'os-bold', serif;
+            font-weight: bolder;
         }
 
-        img {
-            border: none;
-            color: var(--neosoft-blue);
+        .logo {
+            display: block;
+            margin-top: 5rem;
+
+            &:hover,
+            &:focus {
+                img {
+                    scale: 120%;
+                }
+            }
+
+            img {
+                box-shadow: none;
+                transition: all 0.2s;
+            }
+        }
+
+        .by {
+            transition: all 0.2s;
+
+            &:hover,
+            &:focus {
+                font-size: 120%;
+                font-weight: bold;
+            }
         }
     }
 
     .main-header {
         align-items: center;
-        background-color: var(--neosoft-blue);
+        background-color: var(--neosoft-dark-blue);
         color: var(--neosoft-text-on-blue);
         display: flex;
 
@@ -43,8 +64,21 @@ body {
         }
     }
 
-    .lang-btn {
-        font-size: 80%;
-        font-weight: bold;
+    .fork-me {
+        img {
+            box-shadow: none;
+            margin: 0 1rem 0 0;
+        }
+    }
+
+    #accessibility-who {
+        div {
+            display: flex;
+            gap: 1em;
+        }
+
+        img {
+            margin: 0;
+        }
     }
 }

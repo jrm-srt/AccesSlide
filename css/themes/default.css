@@ -76,8 +76,8 @@ Index
 
 body {
 	background-color: #fff;
-	color: #666;
-	font-family: 'os-light';
+	color: var(--neosoft-dark-blue);
+	font-family: 'os-light', serif;
 }
 
 a,
@@ -93,9 +93,15 @@ input:focus {
 	transition: all 0.5s ease;
 }
 
-a,
-.icon {
-	color: #666;
+a {
+	color: var(--neosoft-blue);
+}
+
+footer {
+	a,
+	.icon {
+		color: var(--neosoft-dark-blue);
+	}
 }
 
 a:hover,
@@ -106,7 +112,7 @@ a:focus {
 a:focus,
 select:focus,
 button:focus {
-	outline: 2px solid yellow;
+	outline: 2px solid var(--neosoft-blue);
 }
 
 button {
@@ -131,7 +137,7 @@ figcaption {
 }
 
 strong {
-	font-family: 'os-regular';
+	font-family: 'os-regular', serif;
 }
 
 code,
@@ -161,9 +167,28 @@ pre code {
 	padding: 10px;
 }
 
-.slide img {
+/* TODO: disable img style??? */
+/*.slide img {
 	box-shadow: 0 0 3px #666;
 	border: 3px solid #fff;
+}*/
+
+.lang-btn {
+	color: var(--neosoft-dark-blue);
+	position: absolute;
+	text-decoration: none;
+	font-size: 80%;
+	right: 20px;
+	border-top: 0;
+	padding: 0 5px 3px 5px;
+	border-radius: 0 0 3px 3px;
+	z-index: 900;
+	box-shadow: 0 0 2px #999;
+	background: #fafafa
+}
+
+.lang-btn:hover, .lang-btn:focus {
+	background: #f2f2f2;
 }
 
 /** @subsection 1.1 TABLE **/
@@ -219,7 +244,7 @@ h2 {
 	font-variant: small-caps;
 	line-height: 1.1em;
 	background: #F9F9F9;
-	font-family: 'os-bold';
+	font-family: 'os-bold', serif;
 }
 
 .couv h2,
@@ -241,7 +266,7 @@ h3 {
 	font-feature-settings: "c2sc";
 	font-variant: small-caps;
 	font-weight: normal;
-	font-family: 'os-regular';
+	font-family: 'os-regular', serif;
 }
 
 h4 {
@@ -356,7 +381,7 @@ h6 {
 
 .related a {
 	padding: 2px 3px;
-	font-size: 70%;
+	font-size: 85%;
 	border: 1px solid #666;
 	border-radius: 3px;
 	text-decoration: none;
@@ -530,75 +555,69 @@ button.disc1:focus {
 }
 
 @media screen and (min-width: 48em) {
+	h2 {
+		float: left;
+		margin-bottom: 0.5em;
+	}
 
-h2 {
-	float: left;
-	margin-bottom: 0.5em;
-}
+	h2 + * {
+		clear: both;
+	}
 
-h2 + * {
-	clear: both;
-}
+	h3 {
+		float: left;
+		margin-bottom: 1em;
+	}
 
-h3 {
-	float: left;
-	margin-bottom: 1em;
-}
+	h3 + * {
+		clear: both;
+	}
 
-h3 + * {
-	clear: both;
-}
+	.col-left {
+		float: left;
+		width: 50%;
+		padding: 0 5% 0 0;
+	}
 
-.col-left {
-	float: left;
-	width: 50%;
-	padding: 0 5% 0 0;
-}
+	.col-right {
+		float: right;
+		width: 50%;
+		padding: 0 0 0 5%;
+	}
 
-.col-right {
-	float: right;
-	width: 50%;
-	padding: 0 0 0 5%;
-}
-
-.list-disc li {
-	float: left;
-	width: 25%;
-}
-
+	.list-disc li {
+		float: left;
+		width: 25%;
+	}
 }
 
 @media screen and (max-width: 48em) and (min-width:24em) {
-
-.list-disc li {
-	float: left;
-	width: 50%;
-}
-
+	.list-disc li {
+		float: left;
+		width: 50%;
+	}
 }
 
 @media screen and (max-width: 48em) {
+	.main-header h1 {
+		font-size: 80%;
+	}
 
-.main-header h1 {
-	font-size: 80%;
-}
+	.main-header {
+		background: #fff;
+		padding: 5px;
+		box-shadow: 0 2px 3px #bbb;
+	}
 
-.main-header {
-	background: #fff;
-	padding: 5px;
-	box-shadow: 0 2px 3px #bbb;
-}
+	.tool-bar {
+		box-shadow: 0 -2px 3px #bbb;
+	}
 
-.tool-bar {
-	box-shadow: 0 -2px 3px #bbb;
-}
-
-.related {
-	background: #fff;
-	border: 3px solid #F9F9F9;
-	border-left: 0;
-	border-bottom: 0;
-}
-
+	.related {
+		background: #fff;
+		border: 3px solid #F9F9F9;
+		border-left: 0;
+		border-bottom: 0;
+	}
 }
 

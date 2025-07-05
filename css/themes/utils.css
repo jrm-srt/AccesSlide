@@ -1,0 +1,35 @@
+body {
+    --spacer-size: 2em;
+
+    .center {
+        justify-self: center;
+        display: flex;
+    }
+
+    .extra-small {
+        font-size: 60%;
+    }
+
+    .hero {
+        text-align: center;
+        font-family: 'os-bold', serif;
+        font-size: 120%;
+    }
+
+    .icon-text {
+        align-items: center;
+        display: flex;
+    }
+
+    .spacer-left {
+        margin-left: var(--spacer-size);
+    }
+
+    .spacer-top {
+        margin-top: var(--spacer-size);
+    }
+
+    .spacer-top-small {
+        margin-top: calc(var(--spacer-size) / 2);
+    }
+}
