@@ -88,8 +88,8 @@ body {
         }
     }
 
-    #guides-rgaa {
-        ul {
+    .guides-rgaa {
+        .horizontal {
             display: flex;
             gap: 7rem;
         }
@@ -97,26 +97,26 @@ body {
         .pyramid {
             display: flex;
             justify-content: end;
-            margin-right: 2rem;
-            position: relative;
-
-            img {
-                margin: 0;
-            }
+            margin: 0 4rem 0 auto;
         }
 
         .arrow {
             position: absolute;
-            top: 4rem;
-            right: 2rem;
+            top: 1.5rem;
+            left: -14rem;
         }
 
-        .principles {
+        .right-side {
             align-items: start;
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
+            position: relative;
+        }
+    }
 
+    #guides-rgaa {
+        .right-side {
             div {
                 align-content: center;
                 align-items: center;
@@ -145,6 +145,17 @@ body {
             .principle-4 {
                 background-color: var(--neosoft-dark-blue);
             }
+        }
+    }
+
+    #guides-rgaa-2 {
+        .arrow {
+            top: 9.5rem;
+            left: -10.5rem;
+        }
+
+        .right-side .horizontal {
+            gap: 2rem;
         }
     }
 }
