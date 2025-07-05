@@ -46,8 +46,6 @@ body {
 
     #accessibility-what-3 {
         .columns-2 {
-            align-items: center;
-
             div {
                 display: flex;
                 flex-direction: column;
@@ -66,6 +64,12 @@ body {
     #accessibility-who {
         img {
             margin: 0;
+        }
+    }
+
+    #accessibility-who-2 {
+        a {
+            display: block;
         }
     }
 }
