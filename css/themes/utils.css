@@ -6,6 +6,12 @@ body {
         display: flex;
     }
 
+    .columns-2 {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns:  repeat(2, 1fr);
+    }
+
     .extra-small {
         font-size: 60%;
     }

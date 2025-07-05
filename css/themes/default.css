@@ -75,9 +75,11 @@ Index
  */
 
 body {
+	--title-border-size: 5px;
+
 	background-color: #fff;
 	color: var(--neosoft-dark-blue);
-	font-family: 'os-light', serif;
+	font-family: 'system-ui', 'os-regular', 'sans-serif';
 }
 
 a,
@@ -236,15 +238,16 @@ td {
 
 h2 {
 	margin-bottom: 0;
-	padding: 0.1em;
-	border-left: 5px solid orange;
-	-webkit-font-feature-settings: "c2sc";
+	padding-inline: 0.25em;
+	border-left: var(--title-border-size) solid var(--neosoft-blue);
+	/*-webkit-font-feature-settings: "c2sc";
 	-moz-font-feature-settings: "c2sc";
 	font-feature-settings: "c2sc";
-	font-variant: small-caps;
+	font-variant: small-caps;*/
+	text-transform: uppercase;
 	line-height: 1.1em;
 	background: #F9F9F9;
-	font-family: 'os-bold', serif;
+	/*font-family: 'os-bold', serif;*/
 }
 
 .couv h2,
@@ -256,17 +259,19 @@ h2 {
 }
 
 h3 {
-	padding: 0 5px 5px 5px;
+	padding-inline: 0.25em;
 	margin: 0;
-	border-top: 2px solid orange;
+	border-left: var(--title-border-size) solid var(--neosoft-blue);
+	/*border-bottom: var(----title-border-size-size) solid var(--neosoft-blue);*/
+	/*border-top: 2px solid var(--neosoft-blue);
 	background: #666;
-	color: #fff;
-	-webkit-font-feature-settings: "c2sc";
+	color: #fff;*/
+	/*-webkit-font-feature-settings: "c2sc";
 	-moz-font-feature-settings: "c2sc";
 	font-feature-settings: "c2sc";
 	font-variant: small-caps;
 	font-weight: normal;
-	font-family: 'os-regular', serif;
+	font-family: 'os-regular', serif;*/
 }
 
 h4 {
@@ -313,11 +318,21 @@ h6 {
  * -------------------------
  */
 
-.main-header h1 {
-	font-size: 3vh;
-	color: #666;
-	font-weight: normal;
+.main-header{
+	align-items: center;
+	background-color: var(--neosoft-dark-blue);
+	color: var(--neosoft-text-on-blue);
+	display: flex;
+
+	h1 {
+		color: var(--neosoft-text-on-blue);
+		flex-grow: 1;
+		font-weight: bold;
+		margin-block: 0.5rem;
+		text-align:  center;
+	}
 }
+
 
 .modeplan .main-header {
 	background: #fff;
@@ -358,12 +373,12 @@ h6 {
 
 .slide-counter-current {
 	background-color: #fff;
-	color: #666;
+	color: var(--neosoft-dark-blue);
 	border: 1px solid #666;
 }
 
 .slide-counter-total {
-	background-color: #666;
+	background-color: var(--neosoft-dark-blue);
 	color: #fff;
 	border: 1px solid transparent;
 }
@@ -488,7 +503,7 @@ button.disc1:focus {
 
 .tool-block {
 	background-color: #F9F9F9;
-	color: #666;
+	color: var(--neosoft-dark-blue);
 	box-shadow: 0 0 10px #000;
 }
 

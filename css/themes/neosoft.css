@@ -9,6 +9,15 @@ body {
 
     letter-spacing: 0.1rem;
 
+    b {
+        color: var(--neosoft-blue);
+    }
+
+    cite {
+        display: block;
+        margin-top: calc(var(--spacer-size) / 2);
+    }
+
     .couv {
         align-items: center;
         color: var(--neosoft-dark-blue);
@@ -19,6 +28,7 @@ body {
         h1 {
             margin-bottom: 0.1em;
             font-family: 'os-bold', serif;
+            font-size: 4rem;
             font-weight: bolder;
         }
 
@@ -50,24 +60,28 @@ body {
         }
     }
 
-    .main-header {
-        align-items: center;
-        background-color: var(--neosoft-dark-blue);
-        color: var(--neosoft-text-on-blue);
-        display: flex;
-
-        h1 {
-            color: var(--neosoft-text-on-blue);
-            flex-grow: 1;
-            font-weight: bold;
-            text-align:  center;
+    .fork-me {
+        img {
+            margin: 0 0.5rem 0 0;
         }
     }
 
-    .fork-me {
+    #accessibility-what-3 {
+        .columns-2 {
+            align-items: center;
+
+            div {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
         img {
-            box-shadow: none;
-            margin: 0 1rem 0 0;
+            display: block;
+        }
+
+        a {
+            text-align: center;
         }
     }
 
