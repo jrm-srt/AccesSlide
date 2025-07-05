@@ -1,0 +1,50 @@
+/*
+TODO:
+- Font-sizes defined by Access42 are expressed in 'vh', which might not be the best thing...
+*/
+body {
+    --neosoft-blue: #051742;
+    --neosoft-text-on-blue: white;
+
+    letter-spacing: 0.1rem;
+
+    .extra-small {
+        font-size: 60%;
+    }
+
+    .couv {
+        align-items: center;
+        color: var(--neosoft-blue);
+        display: flex;
+        flex-direction:  column;
+        justify-content:  center;
+
+        h1 {
+            font-weight: bold;
+        }
+
+        img {
+            border: none;
+            color: var(--neosoft-blue);
+        }
+    }
+
+    .main-header {
+        align-items: center;
+        background-color: var(--neosoft-blue);
+        color: var(--neosoft-text-on-blue);
+        display: flex;
+
+        h1 {
+            color: var(--neosoft-text-on-blue);
+            flex-grow: 1;
+            font-weight: bold;
+            text-align:  center;
+        }
+    }
+
+    .lang-btn {
+        font-size: 80%;
+        font-weight: bold;
+    }
+}
