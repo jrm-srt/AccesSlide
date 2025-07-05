@@ -115,7 +115,7 @@ body {
         }
     }
 
-    #guides-rgaa {
+    #guides-rgaa-principles {
         .right-side {
             div {
                 align-content: center;
@@ -148,14 +148,26 @@ body {
         }
     }
 
-    #guides-rgaa-2 {
+    #guides-rgaa-rules {
         .arrow {
-            top: 9.5rem;
+            top: 11.25rem;
             left: -10.5rem;
         }
 
         .right-side .horizontal {
             gap: 2rem;
+        }
+    }
+
+    #guides-rgaa-criteria {
+        .arrow {
+            top: 18rem;
+            left: -7.5rem;
+        }
+
+        .right-side img {
+            justify-content: start;
+            margin: 0;
         }
     }
 }
