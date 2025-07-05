@@ -35,28 +35,6 @@ body {
         .logo {
             display: block;
             margin-top: 5rem;
-
-            &:hover,
-            &:focus {
-                img {
-                    scale: 120%;
-                }
-            }
-
-            img {
-                box-shadow: none;
-                transition: all 0.2s;
-            }
-        }
-
-        .by {
-            transition: all 0.2s;
-
-            &:hover,
-            &:focus {
-                font-size: 120%;
-                font-weight: bold;
-            }
         }
     }
 
@@ -86,11 +64,6 @@ body {
     }
 
     #accessibility-who {
-        div {
-            display: flex;
-            gap: 1em;
-        }
-
         img {
             margin: 0;
         }
