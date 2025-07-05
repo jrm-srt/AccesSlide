@@ -87,4 +87,64 @@ body {
             margin-top: 0;
         }
     }
+
+    #guides-rgaa {
+        ul {
+            display: flex;
+            gap: 7rem;
+        }
+
+        .pyramid {
+            display: flex;
+            justify-content: end;
+            margin-right: 2rem;
+            position: relative;
+
+            img {
+                margin: 0;
+            }
+        }
+
+        .arrow {
+            position: absolute;
+            top: 4rem;
+            right: 2rem;
+        }
+
+        .principles {
+            align-items: start;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            div {
+                align-content: center;
+                align-items: center;
+                border-radius: 0.5rem;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                font-weight: bold;
+                padding: 1.5rem;
+                text-align: center;
+                width: clamp(20rem, 100%, 30rem);
+            }
+
+            .principle-1 {
+                background-color: hsl(from var(--neosoft-dark-blue) h s calc(l + 50));
+            }
+
+            .principle-2 {
+                background-color: hsl(from var(--neosoft-dark-blue) h s calc(l + 30));
+            }
+
+            .principle-3 {
+                background-color: hsl(from var(--neosoft-dark-blue) h s calc(l + 10));
+            }
+
+            .principle-4 {
+                background-color: var(--neosoft-dark-blue);
+            }
+        }
+    }
 }
