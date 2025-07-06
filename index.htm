@@ -84,7 +84,7 @@
 
             <section class="slide">
                 <h2>AccesSlide</h2>
-                <p>Enfin un diaporama accessible (par <a href="http://www.access42.net">Access42</a>)</p>
+                <p class="spacer-top">Enfin un diaporama accessible (par <a href="http://www.access42.net">Access42</a>)</p>
                 <p class="fork-me">
                     <a class="icon-text" href="https://github.com/access42/AccesSlide" lang="en">
                         <!--<img src="img_slide/forkme.png" alt="Fork me on Github">-->
@@ -93,6 +93,12 @@
                     </a>
                 </p>
                 <p class="spacer-top">Tous les slides de cette présentation ont été réalisés avec cet outil</p>
+            </section>
+
+            <section class="slide">
+                <div class="transition">
+                    <h2>Un peu de contexte</h2>
+                </div>
             </section>
 
             <!-- TODO: choose one slide to explain a11y-->
@@ -119,8 +125,7 @@
             <section id="accessibility-what-2" class="slide">
                 <h2>L'accessibilité, c'est quoi ?</h2>
                 <blockquote>
-                    <p>L’accessibilité du Web signifie que les personnes handicapées peuvent utiliser le Web.</p>
-                    <p>Plus précisément, qu’elles peuvent :</p>
+                    <p>L’<strong>accessibilité</strong> du Web signifie que les personnes handicapées peuvent :</p>
                     <ul class="bg-light">
                         <li><strong>percevoir</strong>,</li>
                         <li><strong>comprendre</strong>,</li>
@@ -143,7 +148,7 @@
                         <cite>Article premier - Convention relative aux droits des personnes handicapées de l’ONU (13 décembre 2006)</cite>
                     </blockquote>
                     <div>
-                        <img src="img_slide/convention-onu.png" alt="Logo ONU" height="400px">
+                        <img src="img_slide/convention-onu.png" alt="Logo ONU" height="325px">
                         <a href="https://www.ohchr.org/fr/instruments-mechanisms/instruments/convention-rights-persons-disabilities">Texte intégral de la Convention relative aux droits des personnes handicapées</a>
                     </div>
                 </div>
@@ -210,7 +215,7 @@
                 <h2>Et la loi dans tout ça ?</h2>
                 <h3>Les obligations</h3>
                 <div>
-                    <ul>
+                    <ul class="bg-light">
                         <li>Être <strong>conforme au RGAA</strong>.</li>
                         <li>Publier une <strong>déclaration d’accessibilité</strong> avec l’état et le niveau de conformité.</li>
                         <li>Mettre en place un <strong>moyen de contact dédié</strong> et porter assistance aux utilisateurs dans un délai raisonnable.</li>
@@ -225,7 +230,7 @@
             <section id="law-3" class="slide">
                 <h2>Et la loi dans tout ça ?</h2>
                 <h3>Pour en savoir plus</h3>
-                <ul class="bg-light">
+                <ul>
                     <li>
                         <a href="http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000000809647&amp;fastPos=1&amp;fastReqId=1497340759&amp;categorieLien=cid&amp;oldAction=rechTexte#LEGIARTI000006682279">Article 47</a><span> en intégralité</span>
                     </li>
@@ -261,15 +266,15 @@
                     <div class="levels">
                         <div class="level">
                             <span class="rating">A</span>
-                            <span class="description">Basic</span>
+                            <span class="description">Fondamental</span>
                         </div>
                         <div class="level">
                             <span class="rating">AA</span>
-                            <span class="description">Recommandé</span>
+                            <span class="description">Avancé</span>
                         </div>
                         <div class="level">
                             <span class="rating">AAA</span>
-                            <span class="description">Total</span>
+                            <span class="description">Exemplaire</span>
                             <div class="level-aaa-overlay Cmasque"></div>
                         </div>
                     </div>
@@ -316,7 +321,7 @@
                         <div class="details Cmasque">
                             <ul>
                                 <li>Enchaînement et comportement logique</li>
-                                <li>Gestion du clavier (patterns)</li>
+                                <li>Gestion du clavier (respect des patterns ARIA)</li>
                                 <li>Aide à la correction d'erreur</li>
                             </ul>
                         </div>
@@ -326,7 +331,7 @@
                         </div>
                         <div class="details Cmasque">
                             <ul>
-                                <li>Supporte différentes technologies d'assistance</li>
+                                <li>Compatible avec les technologies d'assistance</li>
                                 <li>Responsive design</li>
                             </ul>
                         </div>
@@ -426,8 +431,8 @@
                                 <div>
                                     <b>OS</b>
                                     <div class="horizontal">
-                                        <img src="img_slide/os-mac.png" alt="Mac OS X">
                                         <img src="img_slide/os-windows-2.png" alt="Windows">
+                                        <img src="img_slide/os-mac.png" alt="Mac OS X">
                                     </div>
                                 </div>
                             </li>
@@ -505,6 +510,12 @@
                 <p class="center small spacer-top-small">
                     <a href="https://accessibilite.numerique.gouv.fr/methode/environnement-de-test/">Environnements de test RGAA</a>
                 </p>
+            </section>
+
+            <section class="slide">
+                <div class="transition">
+                    <h2>Passons à la technique...</h2>
+                </div>
             </section>
 
             <section class="slide">

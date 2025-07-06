@@ -11,7 +11,6 @@ body {
     letter-spacing: 0.1rem;
 
     .bg-light {
-
         background-color: var(--bg-light);
         padding: var(--bg-padding);
     }
@@ -52,6 +51,10 @@ body {
 
     .neosoft-dark-blue {
         color: var(--neosoft-dark-blue);
+    }
+
+    .transition {
+        color: var(--neosoft-blue);
     }
 
     .warning {

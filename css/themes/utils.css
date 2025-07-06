@@ -46,6 +46,22 @@ body {
         margin-top: calc(var(--spacer-size) / 2);
     }
 
+    .transition {
+        align-items: center;
+        background-color: var(--bg-light);
+        display: flex;
+        font-size: 3.5rem;
+        height: 85vh;
+        justify-content: center;
+
+        h2 {
+            background-color: inherit;
+            border-left: unset;
+            font-style: italic;
+            text-transform: initial;
+        }
+    }
+
     .zoom-on-hover {
         transition: all 0.2s;
 
