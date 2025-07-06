@@ -34,6 +34,18 @@ body {
         font-family: 'system-ui', 'os-regular', serif;
     }
 
+    .list-checkmark {
+        ul {
+            list-style: none;
+        }
+
+        li::before {
+            content: "✔";
+            color: var(--neosoft-blue);
+            margin-right: 1rem;
+        }
+    }
+
     .neosoft-blue {
         color: var(--neosoft-blue);
     }
