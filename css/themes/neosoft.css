@@ -150,10 +150,13 @@ body {
             }
 
             .description {
-                border: 2px solid red;
+                /*--color: var(--neosoft-blue);*/
+                --color: hsl(150deg, 100%, 30%);
+
+                border: 2px solid var(--color);
                 border-radius: 1rem;
-                color: red;
-                padding-inline: 1rem;
+                color: var(--color);
+                padding: 0.25rem 1rem;
                 text-align:  center;
             }
 
