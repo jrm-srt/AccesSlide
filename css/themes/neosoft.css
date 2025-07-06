@@ -19,6 +19,10 @@ body {
         padding-left: calc(3 * var(--bg-padding));
     }
 
+    code {
+        background-color: var(--bg-light);
+    }
+
     .hero {
         color: var(--neosoft-blue);
         font-family: 'os-bold', serif;
@@ -51,6 +55,10 @@ body {
 
     .neosoft-dark-blue {
         color: var(--neosoft-dark-blue);
+    }
+
+    .slide:has(.transition) {
+        padding-inline: 1rem;
     }
 
     .transition {

@@ -10,6 +10,48 @@ body {
         }
     }
 
+    .rgaa-details {
+        align-items: baseline;
+        border: 1px solid var(--neosoft-blue);
+        display: inline-block;
+        font-size: 1.25rem;
+        padding-block: 0.5rem;
+        padding-inline: 1rem;
+        /*width: fit-content;*/
+        /*position: absolute;
+        right: 5rem;
+        top: 0;*/
+
+        span::after {
+            content: ' >';
+            font-family: system-ui, os-light, sans-serif;
+        }
+
+        .rgaa-thematic {
+            font-family: os-bold, sans-serif;
+        }
+
+        .rgaa-ref {
+            display: inline-block;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                display: inline-block;
+                padding-inline: 0.25rem;
+            }
+        }
+
+        a {
+            text-underline-offset: 4px;
+        }
+    }
+
+    .wcag-level {
+        color: var(--neosoft-blue);
+    }
+
     #accessibility-what-3 {
         .columns-2 {
             grid-template-columns: 60% 40%;

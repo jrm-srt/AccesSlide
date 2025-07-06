@@ -1,6 +1,11 @@
 body {
     --spacer-size: 2em;
 
+    .align-top {
+        align-items: start;
+        height: 100%;
+    }
+
     .center {
         justify-self: center;
         display: flex;
@@ -24,6 +29,10 @@ body {
         font-size: 60%;
     }
 
+    .full-height {
+        height: calc(100vh - 140px);
+    }
+
     .horizontal {
         display: flex;
         gap: 2rem;
@@ -32,6 +41,14 @@ body {
     .icon-text {
         align-items: center;
         display: flex;
+    }
+
+    .slide.full-width {
+        padding-inline: 1rem;
+    }
+
+    .slide.large {
+        padding-inline: 5%;
     }
 
     .spacer-left {

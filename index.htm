@@ -519,6 +519,81 @@
             </section>
 
             <section class="slide">
+                <div class="transition">
+                    <h2>1) Les bases</h2>
+                </div>
+            </section>
+
+            <section id="lang" class="slide large">
+                <div class="columns-2">
+                    <div class="align-top">
+                        <h2>Langue du document <span class="wcag-level">[A]</span></h2>
+                        <div class="rgaa-details">
+                            <span>RGAA</span>
+                            <span class="rgaa-thematic">8. Eléments obligatoires</span>
+                            <ul class="rgaa-ref">
+                                <li>
+                                    <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#8.3">8.3 [A]</a>
+                                </li>
+                                <li>
+                                    <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#8.4">8.4 [A]</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="spacer-top">
+                            <li>Sur la balise <code>&lt;html&gt;</code></li>
+                            <li>En HTML5, attribut <code>lang</code></li>
+                            <li>Code respectant la norme <a href="https://fr.wikipedia.org/wiki/ISO_639">ISO 639</a></li>
+                        </ul>
+                    </div>
+                    <div class="bg-light full-height">
+                        <pre><code>&lt;html lang="fr-FR"&gt;</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <section id="title" class="slide large">
+                <div class="columns-2">
+                    <div class="align-top">
+                        <h2>Titre des pages <span class="wcag-level">[A]</span></h2>
+                        <div class="rgaa-details">
+                            <span>RGAA</span>
+                            <span class="rgaa-thematic">8. Eléments obligatoires</span>
+                            <ul class="rgaa-ref">
+                                <li>
+                                    <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#8.5">8.5 [A]</a>
+                                </li>
+                                <li>
+                                    <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#8.6">8.6 [A]</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="spacer-top">
+                            <li>Balise <code>&lt;title&gt;</code></li>
+                            <li>En angular, utiliser <code>TitleService</code></li>
+                        </ul>
+                        <ul class="spacer-top">
+                            <li><strong>Pertinent</strong></li>
+                            <li>De préférence <strong>unique</strong> (permet de retrouver la page dans l'historique de navigation)</li>
+                            <li>Donne le <strong>contexte</strong> de la page
+                                <ul>
+                                    <li>Formulaire en succès / erreur</li>
+                                    <li>Pagination</li>
+                                    <li>etc</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-light full-height">
+                        <pre><code>&lt;title&gt;OAD - Tasking - Production parameters&lt;/title&gt;</code></pre>
+                        <pre><code>&lt;title&gt;OAD - Tasking - Delivery - Form in error&lt;/title&gt;</code></pre>
+                        <pre><code>&lt;title&gt;OAD - Tasking - Confirmation success&lt;/title&gt;</code></pre>
+                        <pre><code>&lt;title&gt;OAD - Archive imagery "STEREO" (25 / 1234)&lt;/title&gt;</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide">
                 <h2>Exemple minimal de structure</h2>
                 <pre><code class="html">&lt;section class="slide"&gt;
  &lt;h2&gt;Titre de la diapo&lt;/h2&gt;
