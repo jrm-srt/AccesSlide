@@ -153,16 +153,18 @@ body {
         .right-side {
             --shift: 0;
 
-            div {
-                align-content: center;
-                align-items: center;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-template-rows: repeat(4, auto);
+            gap: 1rem;
+
+            .principle {
                 background-color: hsl(from var(--neosoft-blue) h s calc(l + 10));
                 border: 3px solid var(--neosoft-blue);
                 border-radius: 0.5rem;
                 color: var(--neosoft-text-on-blue);
-                display: flex;
-                flex-direction: column;
                 font-weight: bold;
+                margin-block: auto;
                 padding: 1.5rem;
                 text-align: center;
                 width: min(20rem, 100%);
@@ -185,6 +187,15 @@ body {
             .principle-4 {
                 /*background-color: var(--neosoft-dark-blue);*/
                 margin-left: calc(3 * var(--shift));
+            }
+
+            .details {
+                margin-block: auto;
+
+                ul {
+                    font-size: 1.375rem;
+                    margin-block: 0;
+                }
             }
         }
     }
