@@ -67,6 +67,10 @@ body {
         margin-top: calc(var(--spacer-size) / 2);
     }
 
+    .warning {
+        color: var(--warning-color);
+    }
+
     .zoom-on-hover {
         transition: all 0.2s;
 

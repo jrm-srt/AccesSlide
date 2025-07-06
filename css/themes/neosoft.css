@@ -6,6 +6,7 @@ body {
     --neosoft-blue: hsl(220deg, 100%, 50%); /*#05f*/
     --neosoft-dark-blue: hsl(222deg, 86%, 14%); /*#051742*/
     --neosoft-text-on-blue: white;
+    --warning-color: hsl(0deg, 100%, 48%);
 
     letter-spacing: 0.1rem;
 
@@ -75,6 +76,12 @@ body {
     #law {
         li {
             margin-block: 1rem;
+        }
+    }
+
+    #law-2 {
+        .hero {
+            color: var(--warning-color);
         }
     }
 
