@@ -1,0 +1,230 @@
+body {
+    cite {
+        display: block;
+        margin-top: calc(var(--spacer-size) / 2);
+    }
+
+    .fork-me {
+        img {
+            margin: 0 0.5rem 0 0;
+        }
+    }
+
+    #accessibility-what-3 {
+        img {
+            display: block;
+        }
+
+        blockquote {
+            padding-inline: 2rem;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    #accessibility-who {
+        img {
+            margin: 0;
+        }
+    }
+
+    #accessibility-who-2 {
+        a {
+            display: block;
+        }
+    }
+
+    #law {
+        li {
+            margin-block: 1rem;
+        }
+    }
+
+    #law-2 {
+        .hero {
+            color: var(--warning-color);
+        }
+    }
+
+    #law-3 {
+        li {
+            margin-block: 1rem;
+        }
+
+        cite {
+            margin-top: 0;
+        }
+    }
+
+    .guides-rgaa {
+        .horizontal {
+            display: flex;
+            gap: 7rem;
+        }
+
+        .pyramid {
+            display: flex;
+            justify-content: end;
+            margin: 0 4rem 0 auto;
+        }
+
+        .arrow {
+            position: absolute;
+        }
+
+        .right-side {
+            align-items: start;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            position: relative;
+        }
+    }
+
+    #guides {
+        .part-2 {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .levels {
+            display: grid;
+            grid-template-columns:  repeat(3, 1fr);
+            gap: 3rem;
+
+            .level {
+                justify-content: center;
+                display:  flex;
+                flex-direction: column;
+                gap: 2rem;
+                position: relative;
+            }
+
+            .rating {
+                --size: 9rem;
+
+                align-content: center;
+                align-self: center;
+                background: var(--neosoft-blue);
+                border-radius: 100rem;
+                color: var(--neosoft-text-on-blue);
+                display: block;
+                font-size: 3rem;
+                height: var(--size);
+                padding-bottom: 0.5rem;
+                text-align:  center;
+                width: var(--size);
+            }
+
+            .description {
+                /*--color: var(--neosoft-blue);*/
+                --color: hsl(150deg, 100%, 30%);
+
+                border: 2px solid var(--color);
+                border-radius: 1rem;
+                color: var(--color);
+                padding: 0.25rem 1rem;
+                text-align:  center;
+            }
+
+            .level-aaa-overlay {
+                background-color: rgba(255, 255, 255, 0.6);
+                inset: 0;
+                position: absolute;
+                z-index: 1;
+            }
+        }
+    }
+
+    #guides-rgaa-principles {
+        .columns-2 {
+            grid-template-columns: auto 1fr;
+        }
+
+        .arrow {
+            top: 1.5rem;
+            left: -14rem;
+        }
+
+        .right-side {
+            --shift: 0;
+
+            div {
+                align-content: center;
+                align-items: center;
+                background-color: hsl(from var(--neosoft-blue) h s calc(l + 10));
+                border: 3px solid var(--neosoft-blue);
+                border-radius: 0.5rem;
+                color: var(--neosoft-text-on-blue);
+                display: flex;
+                flex-direction: column;
+                font-weight: bold;
+                padding: 1.5rem;
+                text-align: center;
+                width: clamp(20rem, 100%, 30rem);
+            }
+
+            .principle-1 {
+                /*background-color: hsl(from var(--neosoft-dark-blue) h s calc(l + 50));*/
+            }
+
+            .principle-2 {
+                /*background-color: hsl(from var(--neosoft-dark-blue) h s calc(l + 30));*/
+                margin-left: var(--shift);
+            }
+
+            .principle-3 {
+                /*background-color: hsl(from var(--neosoft-dark-blue) h s calc(l + 10));*/
+                margin-left: calc(2 * var(--shift));
+            }
+
+            .principle-4 {
+                /*background-color: var(--neosoft-dark-blue);*/
+                margin-left: calc(3 * var(--shift));
+            }
+        }
+    }
+
+    #guides-rgaa-rules {
+        .columns-2 {
+            grid-template-columns: auto 1fr;
+        }
+
+        .arrow {
+            top: 11.25rem;
+            left: -10rem;
+        }
+
+        .right-side .horizontal {
+            gap: 2rem;
+        }
+    }
+
+    #guides-rgaa-criteria {
+        .columns-2 {
+            grid-template-columns: auto 1fr;
+        }
+
+        .arrow {
+            top: 18rem;
+            left: -6.5rem;
+        }
+
+        .right-side img {
+            justify-content: start;
+            margin: 0;
+        }
+
+        img.zoom-on-hover-img {
+            &:hover,
+            &:focus {
+                scale: 140%;
+                transition: all 0.2s;
+            }
+        }
+    }
+}
