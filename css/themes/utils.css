@@ -1,17 +1,5 @@
 body {
-    --bg-light: hsl(from var(--neosoft-blue) h s calc(l + 40));
     --spacer-size: 2em;
-
-    .bg-light {
-        --padding: 1.5rem;
-
-        background-color: var(--bg-light);
-        padding: var(--padding);
-    }
-
-    ul.bg-light {
-        padding-left: calc(3 * var(--padding));
-    }
 
     .center {
         justify-self: center;
@@ -36,20 +24,6 @@ body {
         font-size: 60%;
     }
 
-    .hero {
-        color: var(--neosoft-blue);
-        font-family: 'os-bold', serif;
-        font-size: 2.25rem;
-        margin-top: 2rem;
-        text-align: center;
-    }
-
-    /* Cancel the hero style */
-    .anti-hero {
-        color: var(--neosoft-dark-blue);
-        font-family: 'system-ui', 'os-regular', serif;
-    }
-
     .icon-text {
         align-items: center;
         display: flex;
@@ -65,10 +39,6 @@ body {
 
     .spacer-top-small {
         margin-top: calc(var(--spacer-size) / 2);
-    }
-
-    .warning {
-        color: var(--warning-color);
     }
 
     .zoom-on-hover {

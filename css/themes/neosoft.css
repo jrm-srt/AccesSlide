@@ -1,10 +1,50 @@
 body {
+    --bg-light: hsl(from var(--neosoft-blue) h s calc(l + 40));
+    --bg-padding: 1.5rem;
+
     --neosoft-blue: hsl(220deg, 100%, 50%); /*#05f*/
     --neosoft-dark-blue: hsl(222deg, 86%, 14%); /*#051742*/
     --neosoft-text-on-blue: white;
+
     --warning-color: hsl(0deg, 100%, 48%);
 
     letter-spacing: 0.1rem;
+
+    .bg-light {
+
+        background-color: var(--bg-light);
+        padding: var(--bg-padding);
+    }
+
+    ul.bg-light {
+        padding-left: calc(3 * var(--bg-padding));
+    }
+
+    .hero {
+        color: var(--neosoft-blue);
+        font-family: 'os-bold', serif;
+        font-size: 2.25rem;
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    /* Cancel the hero style */
+    .anti-hero {
+        color: var(--neosoft-dark-blue);
+        font-family: 'system-ui', 'os-regular', serif;
+    }
+
+    .neosoft-blue {
+        color: var(--neosoft-blue);
+    }
+
+    .neosoft-dark-blue {
+        color: var(--neosoft-dark-blue);
+    }
+
+    .warning {
+        color: var(--warning-color);
+    }
 
     strong,
     .strong {
