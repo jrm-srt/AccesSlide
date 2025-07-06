@@ -43,6 +43,10 @@ body {
         display: flex;
     }
 
+    .italic {
+        font-style: italic;
+    }
+
     .slide.full-width {
         padding-inline: 1rem;
     }
