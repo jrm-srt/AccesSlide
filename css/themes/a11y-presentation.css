@@ -123,6 +123,7 @@ body {
                 /*--color: var(--neosoft-blue);*/
                 --color: hsl(150deg, 100%, 30%);
 
+                /*align-self: center;*/
                 border: 2px solid var(--color);
                 border-radius: 1rem;
                 color: var(--color);
@@ -164,7 +165,7 @@ body {
                 font-weight: bold;
                 padding: 1.5rem;
                 text-align: center;
-                width: clamp(20rem, 100%, 30rem);
+                width: min(20rem, 100%);
             }
 
             .principle-1 {
