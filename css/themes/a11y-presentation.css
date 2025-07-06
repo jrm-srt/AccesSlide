@@ -61,7 +61,6 @@ body {
 
     .guides-rgaa {
         .horizontal {
-            display: flex;
             gap: 7rem;
         }
 
@@ -225,6 +224,51 @@ body {
                 scale: 140%;
                 transition: all 0.2s;
             }
+        }
+    }
+
+    #guides-test-environment {
+        .columns-2 {
+            grid-template-columns: auto 1fr;
+        }
+
+        .horizontal {
+            margin: 0.5rem 0 2rem 0;
+
+            img {
+                height: 70px;
+                margin: 0;
+            }
+        }
+
+
+        li:last-of-type {
+            .horizontal {
+                margin-bottom: 0;
+            }
+        }
+
+        .environments {
+            display: flex;
+            flex-direction: column;
+            font-size: 1.25rem;
+        }
+
+
+        caption {
+            font-size: 1.25rem;
+        }
+
+        table {
+            margin-bottom: 1rem;
+        }
+
+        table, tr, th, td {
+            border: 1px solid var(--neosoft-dark-blue);
+        }
+
+        .bg-light {
+            padding-block: 0.625rem;
         }
     }
 }

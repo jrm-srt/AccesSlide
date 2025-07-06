@@ -24,6 +24,11 @@ body {
         font-size: 60%;
     }
 
+    .horizontal {
+        display: flex;
+        gap: 2rem;
+    }
+
     .icon-text {
         align-items: center;
         display: flex;
