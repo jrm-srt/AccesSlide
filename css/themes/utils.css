@@ -63,6 +63,10 @@ body {
         margin-top: var(--spacer-size);
     }
 
+    .spacer-top-extra {
+        margin-top: calc(2 * var(--spacer-size));
+    }
+
     .spacer-top-small {
         margin-top: calc(var(--spacer-size) / 2);
     }
@@ -92,11 +96,13 @@ body {
             font-weight: bold;
         }
 
-        &:hover,
-        &:focus {
-            img {
-                scale: 120%;
-                transition: all 0.2s;
+        img {
+            transition: all 0.2s;
+
+            &:hover,
+            &:focus {
+                transform: scale(1.2);
+                transition: transform 0.2s;
             }
         }
     }

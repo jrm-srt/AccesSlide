@@ -24,7 +24,8 @@ body {
 
         span::after {
             content: ' >';
-            font-family: system-ui, os-light, sans-serif;
+            font-family: Montserrat, system-ui, os-light, sans-serif;
+            font-weight: 450;
         }
 
         .rgaa-thematic {
@@ -81,6 +82,10 @@ body {
         a {
             display: block;
         }
+
+        li {
+            padding-bottom: 0.5rem;
+        }
     }
 
     #law {
@@ -90,6 +95,10 @@ body {
     }
 
     #law-2 {
+        p span {
+            display: block;
+        }
+
         .hero {
             color: var(--warning-color);
         }
@@ -98,6 +107,10 @@ body {
     #law-3 {
         li {
             margin-block: 1rem;
+
+            li {
+                margin-block: 0.5rem;
+            }
         }
 
         cite {
@@ -142,10 +155,10 @@ body {
             gap: 3rem;
 
             .level {
-                justify-content: center;
                 display:  flex;
                 flex-direction: column;
                 gap: 2rem;
+                justify-content: center;
                 position: relative;
             }
 
@@ -158,6 +171,7 @@ body {
                 border-radius: 100rem;
                 color: var(--neosoft-text-on-blue);
                 display: block;
+                font-family: Chillax-Medium, Montserrat, system-ui, os-regular, sans-serif;
                 font-size: 3rem;
                 height: var(--size);
                 padding-bottom: 0.5rem;
@@ -192,7 +206,7 @@ body {
         }
 
         .arrow {
-            top: 3.5rem;
+            top: 3rem;
             left: -14rem;
         }
 
@@ -211,7 +225,7 @@ body {
                 border-radius: 0.5rem;
                 color: var(--neosoft-text-on-blue);
                 /*color: var(--neosoft-dark-blue);*/
-                font-weight: bold;
+                font-weight: 500;
                 margin-block: auto;
                 padding: 1.5rem;
                 text-align: center;
@@ -241,7 +255,7 @@ body {
                 margin-block: auto;
 
                 ul {
-                    font-size: 1.375rem;
+                    font-size: 1.25rem;
                     margin-block: 0;
                     padding-left: 0.5rem;
                 }
@@ -255,7 +269,7 @@ body {
         }
 
         .arrow {
-            top: 11.25rem;
+            top: 10.25rem;
             left: -10rem;
         }
 
@@ -314,7 +328,7 @@ body {
         .environments {
             display: flex;
             flex-direction: column;
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             gap: 1rem;
         }
 
@@ -329,6 +343,16 @@ body {
 
         .bg-light {
             padding-block: 0.625rem;
+        }
+    }
+
+    #lang {
+        .first-example {
+            margin-top: 9rem;
+        }
+
+        .second-example {
+            margin-top: 24rem;
         }
     }
 }

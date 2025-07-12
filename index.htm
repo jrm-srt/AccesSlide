@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="css/themes/neosoft.css" type="text/css" media="screen">
     <link rel="stylesheet" href="css/themes/utils.css" type="text/css" media="screen">
     <link rel="stylesheet" href="css/themes/a11y-presentation.css" type="text/css" media="screen">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="AccesSlide.js"></script>
@@ -74,7 +77,7 @@
             <section class="slide couv">
                 <h1 class="main-title">Accessibilité web</h1>
                 <p>weekly tech</p>
-                <p class="extra-small">par
+                <p class="small">par
                     <a class="zoom-on-hover" href="www.linkedin.com/in/jérôme-s-469313b0">Jérôme SARTOLOU</a>
                 </p>
                 <a class="logo zoom-on-hover" href="http://www.neosoft.fr">
@@ -163,7 +166,7 @@
                 </div>
                 <div class="Cmasque">
                     <p class="hero">80% des handicaps sont invisibles</p>
-                    <p class="center extra-small">
+                    <p class="center small">
                         <a href="https://handicap.agriculture.gouv.fr/les-grandes-familles-ou-typologies-de-handicap-a231.html">Les grandes familles de handicaps</a>
                     </p>
                 </div>
@@ -222,7 +225,9 @@
                         <li>Afficher le <strong>statut de conformité</strong> (pas conforme, partiellement conforme, conforme) sur la page d’accueil.</li>
                         <li>Publier un <strong>schéma pluriannuel</strong> de mise en accessibilité, décliné en plans d’action annuels.</li>
                     </ul>
-                    <p class="hero">Sanction maximale de 25.000€ par site et par an <span class="anti-hero">pour défaut de publication</span></p>
+                    <p class="hero">
+                        <span>Sanction maximale de 25.000€ par site et par an</span>
+                        <span class="anti-hero">pour défaut de publication</span></p>
                     <p class="spacer-top">Note : les délais de mise en conformité des sites existants ne peuvent excéder <strong class="warning">trois ans</strong>.</p>
                 </div>
             </section>
@@ -311,7 +316,7 @@
                             <ul>
                                 <li>Navigation au clavier</li>
                                 <li>Recherche</li>
-                                <li>Pas de contenu causant des crises d'épilepsie</li>
+                                <li>Attention aux crises d'épilepsie !!!</li>
                             </ul>
                         </div>
 
@@ -321,7 +326,7 @@
                         <div class="details Cmasque">
                             <ul>
                                 <li>Enchaînement et comportement logique</li>
-                                <li>Gestion du clavier (respect des patterns ARIA)</li>
+                                <li>Gestion du clavier (patterns ARIA)</li>
                                 <li>Aide à la correction d'erreur</li>
                             </ul>
                         </div>
@@ -545,9 +550,36 @@
                             <li>En HTML5, attribut <code>lang</code></li>
                             <li>Code respectant la norme <a href="https://fr.wikipedia.org/wiki/ISO_639">ISO 639</a></li>
                         </ul>
+
+                        <div class="spacer-top-extra Cmasque">
+                            <h2>Changement de langue dans le document <span class="wcag-level">[AA]</span></h2>
+                            <div class="rgaa-details">
+                                <span>RGAA</span>
+                                <span class="rgaa-thematic">8. Eléments obligatoires</span>
+                                <ul class="rgaa-ref">
+                                    <li>
+                                        <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#8.7">8.7 [AA]</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#8.8">8.8 [AA]</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul class="spacer-top">
+                                <li>Attribut <code>lang</code> sur l'élément (souvent un <code>&lt;span&gt;</code>) ou un parent</li>
+                                <li>Code respectant la norme <a href="https://fr.wikipedia.org/wiki/ISO_639">ISO 639</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="bg-light full-height">
-                        <pre><code>&lt;html lang="fr-FR"&gt;</code></pre>
+                        <div class="first-example">
+                            <pre><code>&lt;html lang="fr-FR"&gt;</code></pre>
+                        </div>
+
+                        <div class="second-example Cmasque">
+                            <pre><code>&lt;span lang="en"&gt;newsletter&lt;/span&gt;</code></pre>
+                            <pre><code>&lt;span lang="en"&gt;on&lt;/span&gt; ou &lt;span lang="en"&gt;off&lt;/span&gt</code></pre>
+                        </div>
                     </div>
                 </div>
             </section>

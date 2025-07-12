@@ -38,10 +38,11 @@ Index
 	
 }
 
-body{
-	background-color:var(--main-bg);
-	color:var(--font);
-	font-family:'os-light';
+body {
+	background-color: var(--main-bg);
+	color: var(--font);
+	font-family: Montserrat, system-ui, 'os-light', sans-serif;
+	font-weight: 450;
 }
 
 a,
@@ -94,8 +95,8 @@ figcaption{
 	font-size:80%;
 }
 
-strong{
-	font-family:'os-regular';
+strong {
+	font-family: 'os-regular', sans-serif;
 }
 
 blockquote{
@@ -192,7 +193,7 @@ h2{
 	font-variant:small-caps;
 	line-height:1.1em;
 	background:var(--backg-alt);
-	font-family:'os-bold';
+	font-family: 'os-bold', sans-serif;
 }
 
 	@media (--medium){
@@ -220,7 +221,7 @@ h3{
 	color:var(--font-alt);
 	font-variant:small-caps;
 	font-weight:normal;
-	font-family:'os-regular';
+	font-family: 'os-regular', sans-serif;
 }
 
 	@media (--medium){
