@@ -488,6 +488,10 @@ body {
             .bg-light {
                 padding-block: 0.625rem;
             }
+
+            pre {
+                margin-block: 0;
+            }
         }
     }
 }
