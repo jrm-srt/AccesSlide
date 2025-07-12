@@ -77,7 +77,8 @@ body {
         color: var(--neosoft-blue);
     }
 
-    .couv {
+    .couv,
+    .end {
         align-items: center;
         color: var(--neosoft-dark-blue);
         display: flex;
