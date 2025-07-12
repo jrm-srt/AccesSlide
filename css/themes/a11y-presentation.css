@@ -4,7 +4,7 @@ body {
         margin-top: calc(var(--spacer-size) / 2);
     }
 
-    li {
+    ul:not(.rgaa-ref) li {
         margin-bottom: 0.5rem;
     }
 
@@ -469,6 +469,25 @@ body {
     #document-structure-3 {
         img {
             max-height: 80vh;
+        }
+    }
+
+    #document-structure-4 {
+        .landmark-role {
+            margin-inline: 0;
+
+            caption {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+
+            table, tr, th, td {
+                border: 1px solid var(--neosoft-dark-blue);
+            }
+
+            .bg-light {
+                padding-block: 0.625rem;
+            }
         }
     }
 }

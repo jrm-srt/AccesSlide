@@ -711,8 +711,6 @@
                                 </div>
                             </li>
                         </ul>
-
-                        <p class="spacer-top">Rajouter aussi le role ARIA associé (respectivement <code>banner</code>, <code>navigation</code>, <code>main</code>, <code>contentinfo</code>)</p>
                     </div>
 
                     <div class="bg-light full-height">
@@ -795,14 +793,14 @@
                             <li>
                                 <div class="subgrid">
                                     <code>&lt;search&gt;</code>
-                                    <span><b>Champ de recherche</b> [role <code>search</code> ]</span>
+                                    <span><b>Champ de recherche</b></span>
                                 </div>
                             </li>
                             <li>
                                 <div class="subgrid">
                                     <code>&lt;aside&gt;</code>
                                     <div>
-                                        <span><b>Contenu additionnel</b> indirectement lié au contenu du site (exemple : bannière de pub) [role <code>complementary</code> ]</span>
+                                        <span><b>Contenu additionnel</b> indirectement lié au contenu du site (exemple : bannière de pub, glossaire, liens)</span>
                                     </div>
                                 </div>
                             </li>
@@ -879,7 +877,6 @@
                 </div>
             </section>
 
-
             <section id="document-structure-3" class="slide large">
                 <div class="columns-2">
                     <div class="align-top">
@@ -899,7 +896,71 @@
                 </div>
             </section>
 
-            <section id="document-structure-main" class="slide large">
+            <section id="document-structure-4" class="slide large">
+                <div class="columns-2">
+                    <div class="align-top">
+                        <h2>Structure du document <span class="wcag-level">[A]</span></h2>
+                        <div class="rgaa-details">
+                            <span>RGAA</span>
+                            <span class="rgaa-thematic">12. Navigation</span>
+                            <ul class="rgaa-ref">
+                                <li>
+                                    <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#12.6">12.6 [A]</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <p>Rajouter aussi le role ARIA associé au landmark</p>
+
+                        <table class="landmark-role spacer-top">
+                            <caption>Association role / landmark</caption>
+                            <thead>
+                                <tr class="bg-light">
+                                    <th scope="col">Landmark</th>
+                                    <th scope="col">Role</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">header</th>
+                                    <td>banner</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">nav</th>
+                                    <td>navigation</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">main</th>
+                                    <td>main</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">footer</th>
+                                    <td>contentinfo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">aside</th>
+                                    <td>complementary</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">search</th>
+                                    <td>search</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="bg-light full-height">
+                        <pre><code>&lt;header role="banner"&gt;...&lt;/header&gt;</code></pre>
+                        <pre><code>&lt;nav role="navigation"&gt;...&lt;/nav&gt;</code></pre>
+                        <pre><code>&lt;main role="main"&gt;...&lt;/main&gt;</code></pre>
+                        <pre><code>&lt;footer role="contentinfo"&gt;...&lt;/footer&gt;</code></pre>
+                        <pre><code>&lt;aside role="complementary"&gt;...&lt;/aside&gt;</code></pre>
+                        <pre><code>&lt;search role="search"&gt;...&lt;/search&gt;</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <section id="todo" class="slide large">
                 <div class="columns-2">
                     <div class="align-top">
                         <h2>TOTO_title <span class="wcag-level">[A]</span></h2>
