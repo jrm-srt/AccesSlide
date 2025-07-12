@@ -4,6 +4,14 @@ body {
         margin-top: calc(var(--spacer-size) / 2);
     }
 
+    li {
+        margin-bottom: 0.5rem;
+    }
+
+    .example {
+        margin-top: 8.75rem;
+    }
+
     .fork-me {
         img {
             margin: 0 0.5rem 0 0;
@@ -15,6 +23,7 @@ body {
         border: 1px solid var(--neosoft-blue);
         display: inline-block;
         font-size: 1.25rem;
+        margin-bottom: var(--spacer-size);
         padding-block: 0.5rem;
         padding-inline: 1rem;
         /*width: fit-content;*/
@@ -81,16 +90,6 @@ body {
     #accessibility-who-2 {
         a {
             display: block;
-        }
-
-        li {
-            padding-bottom: 0.5rem;
-        }
-    }
-
-    #law {
-        li {
-            margin-block: 1rem;
         }
     }
 
@@ -201,6 +200,10 @@ body {
     }
 
     #guides-rgaa-principles {
+        li {
+            margin-bottom: 0;
+        }
+
         .columns-2 {
             grid-template-columns: auto 1fr;
         }
@@ -264,6 +267,10 @@ body {
     }
 
     #guides-rgaa-rules {
+        li {
+            margin-bottom: 0;
+        }
+
         .columns-2 {
             grid-template-columns: auto 1fr;
         }
@@ -347,12 +354,105 @@ body {
     }
 
     #lang {
-        .first-example {
-            margin-top: 9rem;
+        .example:nth-of-type(2) {
+            margin-top: 25.5rem;
+        }
+    }
+
+    #document-structure {
+        ul.content {
+            li {
+                .subgrid {
+                    align-items: baseline;
+                    display: grid;
+                    gap: 0.5rem;
+                    grid-template-columns: 8rem 1fr;
+
+                    > code {
+                        grid-column: 1;
+                        height: fit-content;
+                        padding: 0.25rem 0.5rem;
+                        width: fit-content;
+                    }
+
+                    > :not(code) {
+                        grid-column: 2;
+                    }
+                }
+            }
         }
 
-        .second-example {
-            margin-top: 24rem;
+        .example {
+            font-weight: 600;
+            margin-top: 0;
+
+            .area {
+                --color: var(--neosoft-blue);
+
+                border-color: var(--color);
+                border-radius: 4px;
+                border-style: solid;
+                border-width: 2px;
+                color: var(--color);
+                margin: 0.5rem;
+                padding: 0.5rem;
+            }
+
+            .container {
+                --color: var(--neosoft-dark-blue);
+            }
+
+            .header {
+                --color: green;
+
+                display: grid;
+                grid-template-columns: 3fr 1fr;
+                grid-template-rows: 1fr;
+
+                span {
+                    grid-column: 1 / span 2;
+                }
+            }
+
+            .nav {
+                --color: darkorange;
+            }
+
+            .search {
+                --color: red;
+            }
+
+            .center-area {
+                display: grid;
+                grid-template-columns: 3fr 1fr;
+                grid-template-rows: 30rem;
+            }
+
+            .section {
+                --color: var(--neosoft-dark-blue);
+            }
+
+            .article {
+                --color: var(--neosoft-dark-blue);
+            }
+
+            .article:nth-of-type(2) {
+                margin-top: 2rem;
+            }
+
+            .article-content {
+                align-items: center;
+                height: 3rem;
+                padding-left: 0.5rem;
+            }
+
+            .aside {
+                --color: gray;
+            }
+
+            .footer {
+                --color: purple;
+            }
         }
     }
 }
