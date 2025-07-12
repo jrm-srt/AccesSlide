@@ -525,7 +525,7 @@
 
             <section class="slide">
                 <div class="transition">
-                    <h2>1) Les bases</h2>
+                    <h2>Les bases</h2>
                 </div>
             </section>
 
@@ -714,7 +714,7 @@
                     </div>
 
                     <div class="bg-light full-height">
-                        <div class="example">
+                        <div class="example document-structure">
                             <div class="area container">
                                 <span>&lt;body&gt;</span>
 
@@ -808,7 +808,7 @@
                     </div>
 
                     <div class="bg-light full-height">
-                        <div class="example">
+                        <div class="example document-structure">
                             <div class="area container">
                                 <span>&lt;body&gt;</span>
 
@@ -910,7 +910,7 @@
                             </ul>
                         </div>
 
-                        <p>Rajouter aussi le role ARIA associé au landmark</p>
+                        <p>Rajouter aussi le <strong>role ARIA</strong> associé au landmark</p>
 
                         <table class="landmark-role spacer-top">
                             <caption>Association role / landmark</caption>
@@ -923,42 +923,42 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <th scope="row">header</th>
+                                    <th scope="row">&lt;header&gt;</th>
                                     <td>banner</td>
                                     <td>
                                         <pre><code>&lt;header role="banner"&gt;...&lt;/header&gt;</code></pre>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">nav</th>
+                                    <th scope="row">&lt;nav&gt;</th>
                                     <td>navigation</td>
                                     <td>
                                         <pre><code>&lt;nav role="navigation"&gt;...&lt;/nav&gt;</code></pre>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">main</th>
+                                    <th scope="row">&lt;main&gt;</th>
                                     <td>main</td>
                                     <td>
                                         <pre><code>&lt;main role="main"&gt;...&lt;/main&gt;</code></pre>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">footer</th>
+                                    <th scope="row">&lt;footer&gt;</th>
                                     <td>contentinfo</td>
                                     <td>
                                         <pre><code>&lt;footer role="contentinfo"&gt;...&lt;/footer&gt;</code></pre>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">aside</th>
+                                    <th scope="row">&lt;aside&gt;</th>
                                     <td>complementary</td>
                                     <td>
                                         <pre><code>&lt;aside role="complementary"&gt;...&lt;/aside&gt;</code></pre>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">search</th>
+                                    <th scope="row">&lt;search&gt;</th>
                                     <td>search</td>
                                     <td>
                                         <pre><code>&lt;search role="search"&gt;...&lt;/search&gt;</code></pre>
@@ -970,24 +970,43 @@
                 </div>
             </section>
 
-            <section id="todo" class="slide large">
+            <section class="slide">
+                <div class="transition">
+                    <h2>La navigation</h2>
+                </div>
+            </section>
+
+            <section id="navigation-skip-link" class="slide large">
                 <div class="columns-2">
                     <div class="align-top">
-                        <h2>TOTO_title <span class="wcag-level">[A]</span></h2>
+                        <h2>Lien d'accès rapide <span class="wcag-level">[A]</span></h2>
                         <div class="rgaa-details">
                             <span>RGAA</span>
-                            <span class="rgaa-thematic">TODO_rgaa_section</span>
+                            <span class="rgaa-thematic">12. Navigation</span>
                             <ul class="rgaa-ref">
                                 <li>
-                                    <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#8.9">TODO_rgaa_criteria [A]</a>
+                                    <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#12.7">12.7 [A]</a>
                                 </li>
                             </ul>
                         </div>
-                        <p><strong>TODO</strong></p>
                         <ul>
-                            <li>TODO <code>&lt;br/&gt;</code></li>
-                            <li>etc</li>
+                            <li>Accès direct au <code>&lt;main&gt;</code> (bypass le header, la nav & co)</li>
+                            <li>Doit être <strong>visible à la prise de focus</strong></li>
+                            <li>Doit être <strong>le premier élément focusable*</strong></li>
+                            <li>Rajouter un <code>tabindex="-1"</code> sur le <code>&lt;main&gt;</code> (pour pallier un problème sur Safari)</li>
+                            <li>A mettre dans un <code>&lt;nav&gt;</code> si on en met plusieurs</li>
                         </ul>
+
+                        <pre><code>&lt;a href="#main"&gt;Contenu principal&lt;/a&gt;</code><code>&lt;main tabindex="-1"&gt;...&lt;/main&gt;</code></pre>
+
+                        <p class="small spacer-top">
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA">Exemple sur developer.mozilla.org</a>
+                        </p>
+                        <p class="extra-small spacer-top-extra"><strong>*</strong> sauf quelques exceptions que l'on verra plus tard</p>
+                    </div>
+
+                    <div class="full-height zoom-on-hover">
+                        <img class="spacer-top-extra" src="./img_slide/skip-link.png" alt="Exemple de lien d'accès rapide">
                     </div>
                 </div>
             </section>
