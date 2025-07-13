@@ -494,4 +494,10 @@ body {
             }
         }
     }
+
+    #navigation-skip-link-2 {
+        .full-height pre {
+            margin-block: 0;
+        }
+    }
 }

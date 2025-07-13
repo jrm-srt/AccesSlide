@@ -997,7 +997,7 @@
                             <li>A mettre dans un <code>&lt;nav&gt;</code> si on en met plusieurs</li>
                         </ul>
 
-                        <pre><code>&lt;a href="#main"&gt;Contenu principal&lt;/a&gt;</code><code>&lt;main tabindex="-1"&gt;...&lt;/main&gt;</code></pre>
+                        <pre><code>&lt;a href="#main"&gt;Contenu principal&lt;/a&gt;</code><code>&lt;main id="main" tabindex="-1"&gt;...&lt;/main&gt;</code></pre>
 
                         <p class="small spacer-top">
                             <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA">Exemple sur developer.mozilla.org</a>
@@ -1026,37 +1026,69 @@
                         </div>
                         <ul>
                             <li>CSS pour masquer le skip-link</li>
-                            <li><strong>TBC</strong> En angular, la classe <code>cdk-visually-hidden</code> peut servir???</li>
+                            <li>
+                                <strong>angular Material</strong>: mixin <code>a11y-visually-hidden</code> et classe <code>cdk-visually-hidden</code>
+                                <span>(</span>
+                                <a href="https://material.angular.dev/cdk/a11y/overview#hiding-elements-in-an-accessible-way" class="small">cf doc Material</a>
+                                <span>)</span>
+                            </li>
                         </ul>
 
-                        <pre>
-<code>
-.sr-only,
-.skip-link:not(:focus, :focus-within) {
-	border: 0 !important;
-	clip-path: inset(50%) !important;
-	height: 1px !important;
-	margin: -1px !important;
-	overflow: hidden !important;
-	padding: 0 !important;
-	width: 1px !important;
-	white-space: nowrap !important;
-}
-.sr-only:not(caption),
-.skip-link:not(caption):not(:focus, :focus-within) {
-	position: absolute !important;
-}
-.sr-only *,
-.skip-link:not(:focus, :focus-within) * {
-	overflow: hidden !important;
-}
- </code>
-                        </pre>
+                        <pre class="spacer-top"><code class="css">
+@use '@angular/cdk';
 
-                        <p class="small spacer-top">
-                            <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA">Exemple sur developer.mozilla.org</a>
-                        </p>
-                        <p class="extra-small spacer-top-extra"><strong>*</strong> sauf quelques exceptions que l'on verra plus tard</p>
+@include cdk.a11y-visually-hidden();
+
+@mixin sr-only() {
+  @extend .cdk-visually-hidden;
+}
+
+.sr-only {
+  @include sr-only();
+}
+
+.skip-link:not(:focus):not(:focus-within) {
+  @include sr-only();
+}
+                        </code></pre>
+                    </div>
+                    <div class="full-height">
+                        <pre><code class="css">.cdk-visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+
+    // This works around a Chrome bug that can cause the tab to
+    // crash when large amounts of non-English text get wrapped:
+    // https://bugs.chromium.org/p/chromium/issues/detail?id=1201444
+    white-space: nowrap;
+
+    // Avoid browsers rendering the focus ring in some cases.
+    outline: 0;
+
+    // Avoid some cases where the browser will still render the
+    // native controls (see #9049).
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    // We need at least one of top/bottom/left/right in order to
+    // prevent cases where the absolute-positioned element is
+    // pushed down and can affect scrolling (see #24597).
+    // `left` was chosen here, because it's the least likely to
+    // break overrides where the element might have been
+    // positioned (e.g. `mat-checkbox`).
+    left: 0;
+
+    [dir='rtl'] & {
+        left: auto;
+        right: 0;
+    }
+}</code></pre>
                     </div>
                 </div>
             </section>
