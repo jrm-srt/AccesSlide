@@ -495,6 +495,12 @@ body {
         }
     }
 
+    #navigation-skip-link-angular {
+        pre {
+            margin-block: 0.5rem 1rem;
+        }
+    }
+
     #navigation-skip-link-css {
         .full-height pre {
             margin-block: 0;
