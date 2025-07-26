@@ -90,19 +90,17 @@ body {
     .zoom-on-hover {
         transition: all 0.2s;
 
+        img {
+            transition: all 0.2s;
+        }
+
         &:hover,
         &:focus {
             font-size: 120%;
             font-weight: bold;
-        }
 
-        img {
-            transition: all 0.2s;
-
-            &:hover,
-            &:focus {
+            img {
                 transform: scale(1.2);
-                transition: transform 0.2s;
             }
         }
     }
