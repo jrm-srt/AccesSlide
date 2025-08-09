@@ -518,4 +518,11 @@ body {
       text-wrap: nowrap;
     }
   }
+
+  #headings {
+    img {
+      margin: 1em;
+      align-self: start;
+    }
+  }
 }
