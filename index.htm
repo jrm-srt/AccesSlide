@@ -1283,7 +1283,8 @@
               </li>
             </ul>
           </div>
-          <p><b>Qu'est-ce qu'un <strong>heading</strong>?</b></p>
+
+          <p><b>Qu'est-ce qu'un <strong>heading</strong> ?</b></p>
           <ul>
             <li>Balises <code>h1</code> à <code>h6</code></li>
             <li>N'importe quelle balise avec les attributs <code>role="heading"</code> et <code>aria-level="n"</code></li>
@@ -1300,6 +1301,7 @@
 &lt;div role="heading" aria-level="1"&gt;Resources for Developers, by Developers&lt;/div&gt;
   &lt;div role="heading" aria-level="2"&gt;Featured articles&lt;/div&gt;
     &lt;div role="heading" aria-level="3"&gt;CSS anchor positioning&lt;/div&gt;
+
 </code>
             </pre>
             <img src="img_slide/headings-map.png" alt="Exemple de structure via l'extension HeadingsMap">
@@ -1308,7 +1310,8 @@
           <div>
             <span>Extension <b>HeadingsMap</b> (
               <a href="https://chromewebstore.google.com/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi">Chrome</a>,
-              <a href="https://addons.mozilla.org/en-US/firefox/addon/headingsmap/">Firefox</a>)</span>
+              <a href="https://addons.mozilla.org/en-US/firefox/addon/headingsmap/">Firefox</a> )
+            </span>
           </div>
         </div>
       </section>
@@ -1337,6 +1340,110 @@
 
           <div class="spacer-top">
             <a href="https://access42.net/en-tetes-non-conformite-wcag-clarification-titre/">Article Access42 sur le sujet</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="list" class="slide large">
+        <div class="align-top">
+          <h2>Listes <span class="wcag-level">[A]</span></h2>
+          <div class="rgaa-details">
+            <span>RGAA</span>
+            <span class="rgaa-thematic">9. Structuration de l'information</span>
+            <ul class="rgaa-ref">
+              <li>
+                <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#9.3">9.3 [A]</a>
+              </li>
+            </ul>
+          </div>
+
+          <p><b>Qu'est-ce qu'une <strong>liste</strong> ?</b></p>
+          <ul>
+            <li>Balises <code>ul</code> + <code>li</code> (liste non-ordonnée)</li>
+            <li>Balises <code>ol</code> + <code>li</code> (liste ordonnée)</li>
+            <li>Balises <code>dl</code> + <code>dt</code> + <code>dd</code> (définitions)</li>
+          </ul>
+
+          <p class="spacer-top"><b>Equivalents ARIA :</b></p>
+          <ul>
+            <li>
+              <code>ul</code> / <code>ol</code> : N'importe quelles balises avec les attributs <code>role="list"</code> + <code>role="listitem"</code>
+            </li>
+            <li>
+              <code>dl</code> / <code>dt</code> / <code>dd</code> : N'importe quelles balises avec les attributs <code>role="list"</code>
+              + <code>role="term"</code> + <code>role="definition"</code>
+            </li>
+          </ul>
+
+          <p class="spacer-top"><b>Règles :</b></p>
+          <ul>
+            <li>Ne pas faire de "fausses listes" (avec des tirets + <code>br</code>, etc)</li>
+            <li>Les ensembles de <strong>liens de navigation</strong> (présents dans les <code>nav</code>) doivent être des listes</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="list-2" class="slide large">
+        <div class="align-top">
+          <h2>Listes <span class="wcag-level">[A]</span></h2>
+          <div class="rgaa-details">
+            <span>RGAA</span>
+            <span class="rgaa-thematic">9. Structuration de l'information</span>
+            <ul class="rgaa-ref">
+              <li>
+                <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#9.3">9.3 [A]</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="columns-2">
+            <pre>
+<code>
+&lt;ul&gt;
+  &lt;li&gt;Nos expertises&lt;/li&gt;
+  &lt;li&gt;Vos enjeux&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Nos expertises&lt;/li&gt;
+  &lt;li&gt;Vos enjeux&lt;/li&gt;
+&lt;/ol&gt;
+
+</code>
+            </pre>
+
+            <pre>
+<code>
+&lt;div role="list"&gt;
+  &lt;span role="listitem"&gt;Nos expertises&lt;/span&gt;
+  &lt;span role="listitem"&gt;Vos enjeux&lt;/span&gt;
+&lt;/div&gt;
+
+</code>
+            </pre>
+          </div>
+
+
+          <div class="columns-2">
+            <pre>
+<code>
+&lt;dl&gt;
+  &lt;dt&gt;Néosoft&lt;/dt&gt;
+  &lt;dd&gt;Meilleure ESN du monde :)&lt;/dd&gt;
+&lt;/dl&gt;
+
+</code>
+            </pre>
+
+            <pre>
+<code>
+&lt;div role="list"&gt;
+  &lt;span role="term"&gt;Néosoft&lt;/span&gt;
+  &lt;span role="definition"&gt;Meilleure ESN du monde :)&lt;/span&gt;
+&lt;/div&gt;
+
+</code>
+            </pre>
           </div>
         </div>
       </section>
