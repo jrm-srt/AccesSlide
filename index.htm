@@ -1490,7 +1490,7 @@
 
           <div class="spacer-top columns-2">
             <div class="align-top">
-              <p>Pour les balises <code>img</code></p>
+              <p><b>Pour les balises <code>img</code> :</b></p>
               <ul>
                 <li><code>aria-labelledby</code></li>
                 <li><code>aria-label</code></li>
@@ -1500,8 +1500,9 @@
             </div>
 
             <div class="align-top">
-              <p>Pour les SVG avec <code>role="img"</code></p>
+              <p><b>Pour les SVG :</b></p>
               <ul>
+                <li><strong>DOIT</strong> absolument avoir l'attribut <code>role="img"</code></li>
                 <li><code>aria-labelledby</code></li>
                 <li><code>aria-label</code></li>
               </ul>
@@ -1608,11 +1609,12 @@
           <div>
             <p class="ko">Non-conforme</p>
             <img src="img_slide/images-svg-aria-label-ko.png" alt="SVG sans nom accessible">
+            <!-- Source : https://www.neosoft.fr/pourquoi-rejoindre-neosoft/ -->
           </div>
         </div>
       </section>
 
-      <section id="images-meaningful-5" class="slide large">
+      <section id="images-meaningful-6" class="slide large">
         <div class="align-top">
           <h2>Images porteuses d'information <span class="wcag-level">[A]</span></h2>
           <div class="rgaa-details">
@@ -1631,6 +1633,94 @@
           <div>
             <p class="ok">Conforme</p>
             <img src="img_slide/images-svg-aria-label-ok.png" alt="SVG avec un nom accessible">
+          </div>
+        </div>
+      </section>
+
+      <section id="images-meaningless" class="slide large">
+        <div class="align-top">
+          <h2>Images décoratives <span class="wcag-level">[A]</span></h2>
+          <div class="rgaa-details">
+            <span>RGAA</span>
+            <span class="rgaa-thematic">1. Images</span>
+            <ul class="rgaa-ref">
+              <li>
+                <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#1.2">1.2 [A]</a>
+              </li>
+            </ul>
+          </div>
+
+          <p><b>Définition : </b>Image n’ayant aucune fonction et ne véhiculant aucune information particulière par rapport au contenu
+            auquel elle est associée.</p>
+          <a href="https://accessibilite.numerique.gouv.fr/methode/glossaire/#image-de-decoration">Définition RGAA complète</a>
+
+          <p class="spacer-top"><b>Pour les <code>img</code> :</b></p>
+          <ul>
+            <li><code>alt</code> vide</li>
+            <li><strong>OU</strong> <code>aria-hidden="true"</code></li>
+            <li><strong>OU</strong> <code>role="presentation"</code></li>
+            <li>
+              <strong>ET aucun</strong> autre attribut permettant de fournir une <strong>alternative textuelle</strong>
+              (<code>aria-label</code>, <code>aria-labelledby</code>, <code>title</code>)
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="images-meaningless-2" class="slide large">
+        <div class="align-top">
+          <h2>Images décoratives <span class="wcag-level">[A]</span></h2>
+          <div class="rgaa-details">
+            <span>RGAA</span>
+            <span class="rgaa-thematic">1. Images</span>
+            <ul class="rgaa-ref">
+              <li>
+                <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#1.2">1.2 [A]</a>
+              </li>
+            </ul>
+          </div>
+
+          <p><b>Définition : </b>Image n’ayant aucune fonction et ne véhiculant aucune information particulière par rapport au contenu
+            auquel elle est associée.</p>
+          <a href="https://accessibilite.numerique.gouv.fr/methode/glossaire/#image-de-decoration">Définition RGAA complète</a>
+
+          <p class="spacer-top"><b>Pour les SVG :</b></p>
+          <ul>
+            <li><strong>PAS</strong> d'attribut <code>role="img"</code></li>
+            <li><code>aria-hidden="true"</code></li>
+            <li><strong>ET</strong> pas de balises <code>title</code> ni <code>desc</code></li>
+            <li>
+              <strong>ET aucun</strong> autre attribut permettant de fournir une <strong>alternative textuelle</strong>
+              (<code>aria-label</code>, <code>aria-labelledby</code>, <code>title</code>)
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="images-meaningless-3" class="slide large">
+        <div class="align-top">
+          <h2>Images décoratives <span class="wcag-level">[A]</span></h2>
+          <div class="rgaa-details">
+            <span>RGAA</span>
+            <span class="rgaa-thematic">1. Images</span>
+            <ul class="rgaa-ref">
+              <li>
+                <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#1.2">1.2 [A]</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="columns-2">
+            <div>
+              <p class="ok">Conforme</p>
+              <img src="img_slide/images-img-decorative-alt-ok.png" alt="Image décorative OK">
+              <!-- Source : https://www.neosoft.fr/nos-expertises/conseil-agilite/ -->
+            </div>
+            <div>
+              <p class="ko">Non-conforme</p>
+              <img src="img_slide/images-img-decorative-alt-ko.png" alt="Image décorative KO">
+              <!-- Source : https://www.neosoft.fr/nos-expertises/conseil-agilite/ -->
+            </div>
           </div>
         </div>
       </section>
