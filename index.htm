@@ -970,38 +970,6 @@
         </div>
       </section>
 
-      <section id="semantic-html" class="slide large">
-        <div class="columns-2">
-          <div class="align-top">
-            <h2>Semantic HTML <span class="wcag-level">[A]</span></h2>
-            <div class="rgaa-details">
-              <span>RGAA</span>
-              <span class="rgaa-thematic">8. Eléments obligatoires</span>
-              <ul class="rgaa-ref">
-                <li>
-                  <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#8.9">8.9 [A]</a>
-                </li>
-              </ul>
-            </div>
-            <p><strong>Respecter la norme HTML</strong></p>
-            <ul>
-              <li>Ne pas utiliser de <code>&lt;br/&gt;</code> pour créer des paragraphes</li>
-              <li>Ne pas utiliser de <code>&lt;div&gt;</code> pour faire des boutons</li>
-              <li>Ne pas utiliser de <code>&lt;hx&gt;</code> pour gérer la font-size</li>
-              <li>
-                <span>Ne pas utiliser de <code>&lt;button&gt;</code> pour les liens</span>
-                <div class="italic"><span>(lien = redirection = <code>&lt;a&gt;</code>)</span></div>
-              </li>
-              <li>
-                <span>Ne pas utiliser de <code>&lt;a&gt;</code> pour les boutons</span>
-                <div class="italic"><span>(bouton = action sur la page courante = <code>&lt;button&gt;</code>)</span></div>
-              </li>
-              <li>etc</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
       <section class="slide">
         <div class="transition">
           <h2>La navigation</h2>
@@ -1448,6 +1416,224 @@
         </div>
       </section>
 
+      <section id="semantic-html" class="slide large">
+        <div class="align-top">
+          <h2>Semantic HTML <span class="wcag-level">[A]</span></h2>
+          <div class="rgaa-details">
+            <span>RGAA</span>
+            <span class="rgaa-thematic">8. Eléments obligatoires</span>
+            <ul class="rgaa-ref">
+              <li>
+                <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#8.9">8.9 [A]</a>
+              </li>
+            </ul>
+          </div>
+          <p><strong>Respecter la norme HTML</strong></p>
+          <ul>
+            <li>Ne pas utiliser de <code>&lt;br/&gt;</code> pour créer des paragraphes</li>
+            <li>Ne pas utiliser de <code>&lt;div&gt;</code> pour faire des boutons</li>
+            <li>Ne pas utiliser de <code>&lt;hx&gt;</code> pour gérer la font-size</li>
+            <li>
+              <span>Ne pas utiliser de <code>&lt;button&gt;</code> pour les liens</span>
+              <div class="italic"><span>(lien = redirection = <code>&lt;a&gt;</code>)</span></div>
+            </li>
+            <li>
+              <span>Ne pas utiliser de <code>&lt;a&gt;</code> pour les boutons</span>
+              <div class="italic"><span>(bouton = action sur la page courante = <code>&lt;button&gt;</code>)</span></div>
+            </li>
+            <li>etc</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="slide">
+        <div class="transition">
+          <h2>Images</h2>
+        </div>
+      </section>
+
+      <section id="images" class="slide large">
+        <div class="align-top">
+          <h2>Images <span class="wcag-level">[A]</span></h2>
+
+          <p class="spacer-top"><strong>2 types de déclaration d'images :</strong>
+          <ul>
+            <li><code>img</code></li>
+            <li><code>role="img"</code> (pour les SVG)</li>
+          </ul>
+
+          <p class="spacer-top"><strong>2 types d'images :</strong>
+          <ul>
+            <li>Porteuses d'information</li>
+            <li>Décoratives</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="images-meaningful" class="slide large">
+        <div class="align-top">
+          <h2>Images porteuses d'information <span class="wcag-level">[A]</span></h2>
+          <div class="rgaa-details">
+            <span>RGAA</span>
+            <span class="rgaa-thematic">1. Images</span>
+            <ul class="rgaa-ref">
+              <li>
+                <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#1.1">1.1 [A]</a>
+              </li>
+              <li>
+                <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#1.3">1.3 [A]</a>
+              </li>
+            </ul>
+          </div>
+
+          <p>Doit avoir une <strong>alternative textuelle</strong> (aussi appelée "<strong>nom accessible</strong>")</p>
+
+          <div class="spacer-top columns-2">
+            <div class="align-top">
+              <p>Pour les balises <code>img</code></p>
+              <ul>
+                <li><code>aria-labelledby</code></li>
+                <li><code>aria-label</code></li>
+                <li><code>alt</code> (à privilégier car supportée par le plus de TA)</li>
+                <li><code>title</code></li>
+              </ul>
+            </div>
+
+            <div class="align-top">
+              <p>Pour les SVG avec <code>role="img"</code></p>
+              <ul>
+                <li><code>aria-labelledby</code></li>
+                <li><code>aria-label</code></li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="spacer-top"><a
+            href="https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/img#%C3%A9crire_des_descriptions_alternatives_significatives">Choisir
+            une description utile</a></p>
+        </div>
+      </section>
+
+      <section id="images-meaningful-2" class="slide large">
+        <div class="align-top">
+          <h2>Images porteuses d'information <span class="wcag-level">[A]</span></h2>
+          <div class="rgaa-details">
+            <span>RGAA</span>
+            <span class="rgaa-thematic">1. Images</span>
+            <ul class="rgaa-ref">
+              <li>
+                <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#1.1">1.1 [A]</a>
+              </li>
+              <li>
+                <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#1.3">1.3 [A]</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="ko">Non-conforme</p>
+            <img src="img_slide/images-img-alt-ko.png" alt="Image avec une mauvaise utilisation de l'attribut alt">
+            <img src="img_slide/images-img-alt-ko-2.png" alt="Image avec attribut alt masqué par aria-label">
+            <p class="happy-at-work-note"><code>alt</code><span class="italic"> OK, mais c'est </span><code>aria-label</code><span
+              class="italic"> qui est prioritaire ici...</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="images-meaningful-3" class="slide large">
+        <div class="align-top">
+          <h2>Images porteuses d'information <span class="wcag-level">[A]</span></h2>
+          <div class="rgaa-details">
+            <span>RGAA</span>
+            <span class="rgaa-thematic">1. Images</span>
+            <ul class="rgaa-ref">
+              <li>
+                <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#1.1">1.1 [A]</a>
+              </li>
+              <li>
+                <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#1.3">1.3 [A]</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="ok">Conforme</p>
+            <img src="img_slide/images-img-alt-ok-2.png" alt="Image avec une bonne utilisation de l'attribut alt">
+            <img src="img_slide/images-img-alt-ok.png" alt="Une autre image avec une bonne utilisation de l'attribut alt">
+          </div>
+        </div>
+      </section>
+
+      <section id="images-meaningful-4" class="slide large">
+        <div class="align-top">
+          <h2>Images porteuses d'information <span class="wcag-level">[A]</span></h2>
+          <div class="rgaa-details">
+            <span>RGAA</span>
+            <span class="rgaa-thematic">1. Images</span>
+            <ul class="rgaa-ref">
+              <li>
+                <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#1.1">1.1 [A]</a>
+              </li>
+              <li>
+                <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#1.3">1.3 [A]</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="ok">Conforme</p>
+            <img src="img_slide/images-img-alt-ok-3.png" alt="Image avec une bonne utilisation de l'attribut alt">
+            <!-- Source: https://www.letemps.ch/culture/ecrans/battlestar-galactica-serie-quil-faut-2023 -->
+          </div>
+        </div>
+      </section>
+
+      <section id="images-meaningful-5" class="slide large">
+        <div class="align-top">
+          <h2>Images porteuses d'information <span class="wcag-level">[A]</span></h2>
+          <div class="rgaa-details">
+            <span>RGAA</span>
+            <span class="rgaa-thematic">1. Images</span>
+            <ul class="rgaa-ref">
+              <li>
+                <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#1.1">1.1 [A]</a>
+              </li>
+              <li>
+                <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#1.3">1.3 [A]</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="ko">Non-conforme</p>
+            <img src="img_slide/images-svg-aria-label-ko.png" alt="SVG sans nom accessible">
+          </div>
+        </div>
+      </section>
+
+      <section id="images-meaningful-5" class="slide large">
+        <div class="align-top">
+          <h2>Images porteuses d'information <span class="wcag-level">[A]</span></h2>
+          <div class="rgaa-details">
+            <span>RGAA</span>
+            <span class="rgaa-thematic">1. Images</span>
+            <ul class="rgaa-ref">
+              <li>
+                <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#1.1">1.1 [A]</a>
+              </li>
+              <li>
+                <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#1.3">1.3 [A]</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="ok">Conforme</p>
+            <img src="img_slide/images-svg-aria-label-ok.png" alt="SVG avec un nom accessible">
+          </div>
+        </div>
+      </section>
 
       <section class="slide">
         <div class="transition">
