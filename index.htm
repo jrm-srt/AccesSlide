@@ -1047,13 +1047,11 @@
               <li>
                 <span>Récupérer l'URL courante auprès du Router et supprimer le fragment potentiellement présent</span>
                 <pre><code>  private readonly router = inject(Router);
-
   protected readonly currentUrl = toSignal(this.router.events.pipe(
     filter(event => event instanceof NavigationEnd),
     map((event) => {
       const anchorRegExp = /^([^#]*)(#.*)*$/;
       const matches = event.url.match(anchorRegExp);
-
       return matches?.[1] ?? '';
     }),
   ));</code></pre>
@@ -1065,7 +1063,6 @@
     map((url) => {
       const anchorRegExp = /^([^#]*)(#.*)*$/;
       const matches = url.match(anchorRegExp);
-
       return matches?.[1] ?? '';
     }),
     takeUntilDestroyed(this.destroyRef)));</code></pre>
@@ -1076,31 +1073,32 @@
       </section>
 
       <section id="navigation-skip-link-css" class="slide large">
-        <div class="columns-2">
-          <div class="align-top">
-            <h2>Lien d'accès rapide <span class="wcag-level">[A]</span></h2>
-            <div class="rgaa-details">
-              <span>RGAA</span>
-              <span class="rgaa-thematic">12. Navigation</span>
-              <ul class="rgaa-ref">
-                <li>
-                  <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#12.7">12.7 [A]</a>
-                </li>
-              </ul>
-            </div>
-            <ul>
-              <li>CSS pour masquer le skip-link</li>
+        <div class="align-top">
+          <h2>Lien d'accès rapide <span class="wcag-level">[A]</span></h2>
+          <div class="rgaa-details">
+            <span>RGAA</span>
+            <span class="rgaa-thematic">12. Navigation</span>
+            <ul class="rgaa-ref">
               <li>
-                <strong>angular Material</strong>: mixin <code>a11y-visually-hidden</code> et classe <code>cdk-visually-hidden</code>
-                <span>(</span>
-                <a href="https://material.angular.dev/cdk/a11y/overview#hiding-elements-in-an-accessible-way" class="small">cf doc
-                  Material</a>
-                <span>)</span>
+                <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#12.7">12.7 [A]</a>
               </li>
             </ul>
+          </div>
 
-            <pre class="spacer-top"><code class="css">
-@use '@angular/cdk';
+          <div class="columns-2">
+            <div>
+              <ul>
+                <li>CSS pour masquer le skip-link</li>
+                <li>
+                  <strong>angular Material</strong>: mixin <code>a11y-visually-hidden</code> et classe <code>cdk-visually-hidden</code>
+                  <span>(</span>
+                  <a href="https://material.angular.dev/cdk/a11y/overview#hiding-elements-in-an-accessible-way" class="small">cf doc
+                    Material</a>
+                  <span>)</span>
+                </li>
+              </ul>
+
+              <pre class="spacer-top-small"><code class="css">@use '@angular/cdk';
 
 @include cdk.a11y-visually-hidden();
 
@@ -1114,11 +1112,11 @@
 
 .skip-link:not(:focus):not(:focus-within) {
   @include sr-only();
-}
-                        </code></pre>
-          </div>
-          <div class="full-height">
-                        <pre><code class="css">.cdk-visually-hidden {
+}</code></pre>
+            </div>
+
+            <div>
+              <pre class="skip-link-css"><code class="css">.cdk-visually-hidden {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -1127,26 +1125,10 @@
     padding: 0;
     position: absolute;
     width: 1px;
-
-    // This works around a Chrome bug that can cause the tab to
-    // crash when large amounts of non-English text get wrapped:
-    // https://bugs.chromium.org/p/chromium/issues/detail?id=1201444
     white-space: nowrap;
-
-    // Avoid browsers rendering the focus ring in some cases.
     outline: 0;
-
-    // Avoid some cases where the browser will still render the
-    // native controls (see #9049).
     -webkit-appearance: none;
     -moz-appearance: none;
-
-    // We need at least one of top/bottom/left/right in order to
-    // prevent cases where the absolute-positioned element is
-    // pushed down and can affect scrolling (see #24597).
-    // `left` was chosen here, because it's the least likely to
-    // break overrides where the element might have been
-    // positioned (e.g. `mat-checkbox`).
     left: 0;
 
     [dir='rtl'] & {
@@ -1154,6 +1136,7 @@
         right: 0;
     }
 }</code></pre>
+            </div>
           </div>
         </div>
       </section>
@@ -1262,7 +1245,7 @@
             <li>N'importe quelle balise avec les attributs <code>role="heading"</code> et <code>aria-level="n"</code></li>
           </ul>
 
-          <div class="spacer-top columns-2">
+          <div class="columns-2">
             <pre>
 <code>
 &lt;h1&gt;Resources for Developers, by Developers&lt;/h1&gt;
@@ -1274,12 +1257,11 @@
   &lt;div role="heading" aria-level="2"&gt;Featured articles&lt;/div&gt;
     &lt;div role="heading" aria-level="3"&gt;CSS anchor positioning&lt;/div&gt;
 
-</code>
-            </pre>
+</code></pre>
             <img src="img_slide/headings-map.png" alt="Exemple de structure via l'extension HeadingsMap">
           </div>
 
-          <div>
+          <div class="spacer-top-small">
             <span>Extension <b>HeadingsMap</b> (
               <a href="https://chromewebstore.google.com/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi">Chrome</a>,
               <a href="https://addons.mozilla.org/en-US/firefox/addon/headingsmap/">Firefox</a> )
@@ -1369,9 +1351,7 @@
           </div>
 
           <div class="columns-2">
-            <pre>
-<code>
-&lt;ul&gt;
+            <pre><code>&lt;ul&gt;
   &lt;li&gt;Nos expertises&lt;/li&gt;
   &lt;li&gt;Vos enjeux&lt;/li&gt;
 &lt;/ul&gt;
@@ -1379,43 +1359,25 @@
 &lt;ol&gt;
   &lt;li&gt;Nos expertises&lt;/li&gt;
   &lt;li&gt;Vos enjeux&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ol&gt;</code></pre>
 
-</code>
-            </pre>
-
-            <pre>
-<code>
-&lt;div role="list"&gt;
+            <pre><code>&lt;div role="list"&gt;
   &lt;span role="listitem"&gt;Nos expertises&lt;/span&gt;
   &lt;span role="listitem"&gt;Vos enjeux&lt;/span&gt;
-&lt;/div&gt;
-
-</code>
-            </pre>
+&lt;/div&gt;</code></pre>
           </div>
 
 
           <div class="columns-2">
-            <pre>
-<code>
-&lt;dl&gt;
+            <pre><code>&lt;dl&gt;
   &lt;dt&gt;Néosoft&lt;/dt&gt;
   &lt;dd&gt;Meilleure ESN du monde :)&lt;/dd&gt;
-&lt;/dl&gt;
+&lt;/dl&gt;</code></pre>
 
-</code>
-            </pre>
-
-            <pre>
-<code>
-&lt;div role="list"&gt;
+            <pre><code>&lt;div role="list"&gt;
   &lt;span role="term"&gt;Néosoft&lt;/span&gt;
   &lt;span role="definition"&gt;Meilleure ESN du monde :)&lt;/span&gt;
-&lt;/div&gt;
-
-</code>
-            </pre>
+&lt;/div&gt;</code></pre>
           </div>
         </div>
       </section>
@@ -1556,22 +1518,25 @@
             </div>
 
             <div>
-              <p class="ko">Non-conforme</p>
+              <p>
+                <span class="ko">Non-conforme</span>
+                <a class="small italic" href="https://www.allocine.fr/article/fichearticle_gen_carticle=18684283.html"
+                  target="_blank">Source</a>
+              </p>
               <pre>
 <code>&lt;img width="654" height="368" src="https://.../3586585.jpg"&gt;</code></pre>
-              <a class="small italic" href="https://www.allocine.fr/article/fichearticle_gen_carticle=18684283.html"
-                target="_blank">Source</a>
 
-
-              <p class="ok spacer-top">Conforme</p>
+              <p class="spacer-top">
+                <span class="ok">Conforme</span>
+                <a class="small italic" href="https://www.letemps.ch/culture/ecrans/battlestar-galactica-serie-quil-faut-2023"
+                  target="_blank">Source</a>
+              </p>
               <pre>
 <code>&lt;img
   alt="La scène de la Cène revisitée avec une femme robot au centre, une image emblématique de «Battlestar Galactica». — © SyFy"
   title="La scène de la Cène revisitée avec une femme robot au centre, une image emblématique de «Battlestar Galactica». — © SyFy"
   src="https://.../c6cd71d0-66c1-4bfc-b47f-46ea880cca61/small"&gt;
 </code></pre>
-              <a class="small italic" href="https://www.letemps.ch/culture/ecrans/battlestar-galactica-serie-quil-faut-2023"
-                target="_blank">Source</a>
             </div>
           </div>
         </div>
@@ -1600,22 +1565,26 @@
             </div>
 
             <div>
-              <p class="ko">Non-conforme</p>
+              <p>
+                <span class="ko">Non-conforme</span>
+                <a class="small italic"
+                  href="https://www.facebook.com/photo.php?fbid=3775538312463855&id=1233791623305216&set=a.1369724083045302" target="_blank">Source</a>
+              </p>
               <pre>
 <code>&lt;img
   alt="Aucune description de photo disponible."
   src="https://...7927516228250238976_n.jpg"&gt;</code></pre>
-              <a class="small italic"
-                href="https://www.facebook.com/photo.php?fbid=3775538312463855&id=1233791623305216&set=a.1369724083045302" target="_blank">Source</a>
 
 
-              <p class="ok spacer-top">Conforme</p>
+              <p class="spacer-top">
+                <span class="ok">Conforme</span>
+                <a class="small italic" href="https://edition.cnn.com/2013/07/03/us/michael-jordan-fast-facts" target="_blank">Source</a>
+              </p>
               <pre>
 <code>&lt;img
   alt="To this day, people still talk about the 1988 NBA Dunk Contest, a memorable duel between Jordan and Dominique Wilkins. The two went tit-for-tat in the finals, with both scoring a pair of perfect 50s. In the end, it was Jordan — with the support of the hometown Chicago crowd — clinching back-to-back dunk titles."
   src="https://.../200418150857-17-jordan-gallery-restricted.jpg"&gt;
 </code></pre>
-              <a class="small italic" href="https://edition.cnn.com/2013/07/03/us/michael-jordan-fast-facts" target="_blank">Source</a>
             </div>
           </div>
         </div>
@@ -1646,13 +1615,15 @@
             </div>
 
             <div>
-              <p class="ko">Non-conforme</p>
+              <p>
+                <span class="ko">Non-conforme</span>
+                <a class="small italic" href="https://www.neosoft.fr/" target="_blank">Source</a>
+              </p>
               <pre>
 <code>&lt;img
   alt="Pastille_Happy_Work_2023"
   src="https://.../Pastille_Happy_Work_2023.gif"&gt;</code></pre>
               <p>Perte d'information entre l'image et l'attribut <code>alt</code></p>
-              <a class="small italic" href="https://www.neosoft.fr/" target="_blank">Source</a>
 
               <pre>
 <code>&lt;img
@@ -1732,16 +1703,18 @@
             </div>
 
             <div>
-              <p class="ko">Non-conforme</p>
+              <p>
+                <span class="ko">Non-conforme</span>
+                <a class="small italic" href="https://www.neosoft.fr/pourquoi-rejoindre-neosoft/" target="_blank">Source</a>
+              </p>
               <pre>
 <code>&lt;svg
   width="1300" height="600" viewBox="0 0 1300 600" fill="none"
   xmlns="http://www.w3.org/2000/svg"&gt;
   ...
 &lt;/svg&gt;</code></pre>
-              <a class="small italic" href="https://www.neosoft.fr/pourquoi-rejoindre-neosoft/" target="_blank">Source</a>
 
-              <p class="ok spacer-top">Conforme</p>
+              <p class="ok spacer-top-small">Conforme</p>
               <pre>
 <code>&lt;svg
   width="1300" height="600" viewBox="0 0 1300 600" fill="none"
@@ -1821,26 +1794,30 @@
             <div>
               <img src="img_slide/images-img-decorative-ko.png" height="350px"
                 alt="Image décorative avec un alt permettant d'illustrer une mauvaise utilisation de l'attribut alt">
-              <p class="ko">Non-conforme</p>
+              <p>
+                <span class="ko">Non-conforme</span>
+                <a class="small italic" href="https://www.neosoft.fr/nos-expertises/conseil-agilite/" target="_blank">Source</a>
+              </p>
               <pre>
 <code>&lt;img
   width="800" height="855"
   src="https://.../header-agile-800x855.jpg"
   alt="header-conseil-agilite"&gt;</code></pre>
-              <a class="small italic" href="https://www.neosoft.fr/nos-expertises/conseil-agilite/" target="_blank">Source</a>
             </div>
 
             <div>
               <img src="img_slide/images-img-decorative-ok.png" alt="Image décorative correcte (sans nom accessible)" height="350px">
 
-              <p class="ok">Conforme</p>
+              <p>
+                <span class="ok">Conforme</span>
+                <a class="small italic" href="https://www.neosoft.fr/nos-expertises/conseil-agilite/" target="_blank">Source</a>
+              </p>
               <pre>
 <code>&lt;img
   width="422" height="158"
   src="https://.../MicrosoftTeams-image-33.jpg"
   alt=""&gt;
 </code></pre>
-              <a class="small italic" href="https://www.neosoft.fr/nos-expertises/conseil-agilite/" target="_blank">Source</a>
             </div>
           </div>
         </div>
@@ -1864,7 +1841,10 @@
               alt="Image décorative SVG correcte (sans nom accessible)">
 
             <div>
-              <p class="ok">Conforme</p>
+              <p>
+                <span class="ok">Conforme</span>
+                <a class="small italic" href="https://angular.dev/" target="_blank">Source</a>
+              </p>
               <pre>
 <code>&lt;a href="/docs"&gt;
   &lt;svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg"&gt;
@@ -1872,7 +1852,6 @@
   &lt;/svg&gt;
   &lt;span&gt;Docs&lt;/span&gt;
 &lt;/a&gt;</code></pre>
-              <a class="small italic" href="https://angular.dev/" target="_blank">Source</a>
             </div>
           </div>
         </div>
@@ -1886,12 +1865,14 @@
             <div class="center">
               <div>
                 <img src="img_slide/images-svg-facebook.png" alt="Image décorative ou pas ?">
-                <p><a class="small italic" href="https://www.instagram.com/" target="_blank">Source</a></p>
               </div>
             </div>
 
             <div>
-              <p class="quiz">QUIZ : conforme ou pas ?</p>
+              <p>
+                <span class="quiz">QUIZ : conforme ou pas ?</span>
+                <a class="small italic" href="https://www.instagram.com/" target="_blank">Source</a>
+              </p>
               <pre>
 <code>&lt;svg
   aria-label="Se connecter avec Facebook"
@@ -1917,7 +1898,7 @@
       </section>
 
 
-      <section id="images-text-neighbour" class="slide large">
+      <section id="images-quiz-2" class="slide large">
         <div class="align-top">
           <h2>QUIZ Images <span class="wcag-level">[A]</span></h2>
 
@@ -1927,7 +1908,10 @@
             </div>
 
             <div>
-              <p class="quiz spacer-top">QUIZ : conforme ou pas ?</p>
+              <p>
+                <span class="quiz">QUIZ : conforme ou pas ?</span>
+                <a class="small italic" href="https://www.neosoft.fr/" target="_blank">Source</a>
+              </p>
               <pre>
 <code>&lt;img
   alt="connais tu ton voisin, neosoft"
@@ -1943,6 +1927,131 @@
             </div>
           </div>
         </div>
+      </section>
+
+      <section id="images-figure" class="slide large">
+        <div class="align-top">
+          <h2>Légende d'image <span class="wcag-level">[A]</span></h2>
+          <div class="rgaa-details">
+            <span>RGAA</span>
+            <span class="rgaa-thematic">1. Images</span>
+            <ul class="rgaa-ref">
+              <li>
+                <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#1.9">1.9 [A]</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="columns-2">
+            <div>
+              <p><strong>Légende</strong> = texte associé à une image et apportant des informations complémentaires</p>
+              <ul>
+                <li>Description</li>
+                <li>Copyright</li>
+                <li>Auteur</li>
+                <li>etc</li>
+              </ul>
+
+              <p class="spacer-top">Utilisation de <code>figure</code> + <code>img</code> + <code>figcaption</code></p>
+            </div>
+
+            <div>
+              <img src="img_slide/images-figure-st.png" alt="Exemple de figure + figcaption">
+              <p>
+                <a class="small italic" href="https://actu.fr/occitanie/toulouse_31555/smoking-a-la-james-bond-three-peat-l-oeil-d-ovale-masque-sur-la-finale-toulouse-bordeaux_62845110.html" target="_blank">Source</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="images-figure-2" class="slide large">
+        <div class="align-top">
+          <h2>Légende d'image <span class="wcag-level">[A]</span></h2>
+          <div class="rgaa-details">
+            <span>RGAA</span>
+            <span class="rgaa-thematic">1. Images</span>
+            <ul class="rgaa-ref">
+              <li>
+                <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#1.9">1.9 [A]</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="columns-2">
+            <div>
+              <p>Pattern à respecter :</p>
+              <pre>
+<code>&lt;figure role="figure | group" aria-label="[contenu du figcaption]"&gt;
+  &lt;img
+    src="..."
+    alt="Alternative textuelle"&gt;
+  &lt;figcaption&gt;
+    [contenu du alt de l'img] Légende de l'image
+  &lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+            </div>
+
+            <div>
+              <img src="img_slide/images-figure-st.png" alt="Exemple de figure + figcaption">
+              <p>
+                <a class="small italic" href="https://actu.fr/occitanie/toulouse_31555/smoking-a-la-james-bond-three-peat-l-oeil-d-ovale-masque-sur-la-finale-toulouse-bordeaux_62845110.html" target="_blank">Source</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="images-figure-3" class="slide large">
+        <div class="align-top">
+          <h2>Légende d'image <span class="wcag-level">[A]</span></h2>
+          <div class="rgaa-details">
+            <span>RGAA</span>
+            <span class="rgaa-thematic">1. Images</span>
+            <ul class="rgaa-ref">
+              <li>
+                <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#1.9">1.9 [A]</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="columns-2">
+            <div>
+              <p>Exemple :</p>
+              <pre><code>&lt;figure role="group" aria-label="Et à la fin, c'est toujours Toulouse qui gagne... (©Icon Sport)"&gt;
+    &lt;img
+      src="https://.../joie-toulouse-brennus-rugby-top-14-960x640.jpg"
+      alt="Et à la fin, c'est toujours Toulouse qui gagne..."&gt;
+    &lt;figcaption&gt;
+      Et à la fin, c'est toujours Toulouse qui gagne...
+      &lt;span class="copyright"&gt;(©Icon Sport)&lt;/span&gt;
+    &lt;/figcaption&gt;
+  &lt;/figure&gt;</code></pre>
+            </div>
+
+            <div>
+              <img src="img_slide/images-figure-st.png" alt="Exemple de figure + figcaption">
+              <p>
+                <a class="small italic" href="https://actu.fr/occitanie/toulouse_31555/smoking-a-la-james-bond-three-peat-l-oeil-d-ovale-masque-sur-la-finale-toulouse-bordeaux_62845110.html" target="_blank">Source</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="images-additional-info" class="slide large">
+        <div class="align-top">
+          <h2>Images <span class="wcag-level">[A]</span></h2>
+
+          <p class="spacer-top">D'autres use-cases non-abordés :</p>
+          <ul>
+            <li>
+              Autres types d'images (<code>area</code>, <code>input type="image"</code>, images réactives,
+              <code>object type="image/..."</code>, <code>embed type="image/..."</code>, <code>canvas</code>)</li>
+            <li>Images texte</li>
+            <li>CAPTCHA</li>
+            <li>Description détaillée</li>
+          </ul>
       </section>
 
       <section class="slide">
