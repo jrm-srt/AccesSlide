@@ -1456,16 +1456,16 @@
         <div class="align-top">
           <h2>Images <span class="wcag-level">[A]</span></h2>
 
-          <p class="spacer-top"><strong>2 types de déclaration d'images :</strong>
-          <ul>
-            <li><code>img</code></li>
-            <li><code>role="img"</code> (pour les SVG)</li>
-          </ul>
-
           <p class="spacer-top"><strong>2 types d'images :</strong>
           <ul>
             <li>Porteuses d'information</li>
             <li>Décoratives</li>
+          </ul>
+
+          <p class="spacer-top"><strong>2 types principaux de déclaration d'images :</strong>
+          <ul>
+            <li><code>img</code></li>
+            <li><code>svg</code></li>
           </ul>
         </div>
       </section>
@@ -1500,7 +1500,7 @@
             </div>
 
             <div class="align-top">
-              <p><b>Pour les SVG :</b></p>
+              <p><b>Pour les <code>svg</code> :</b></p>
               <ul>
                 <li><strong>DOIT</strong> absolument avoir l'attribut <code>role="img"</code></li>
                 <li><code>aria-labelledby</code></li>
@@ -1515,7 +1515,7 @@
         </div>
       </section>
 
-      <section id="images-meaningful-2" class="slide large">
+      <section id="images-meaningful-alt-battlestar-galactica" class="slide large">
         <div class="align-top">
           <h2>Images porteuses d'information <span class="wcag-level">[A]</span></h2>
           <div class="rgaa-details">
@@ -1531,18 +1531,33 @@
             </ul>
           </div>
 
-          <div>
-            <p class="ko">Non-conforme</p>
-            <img src="img_slide/images-img-alt-ko.png" alt="Image avec une mauvaise utilisation de l'attribut alt">
-            <img src="img_slide/images-img-alt-ko-2.png" alt="Image avec attribut alt masqué par aria-label">
-            <p class="happy-at-work-note"><code>alt</code><span class="italic"> OK, mais c'est </span><code>aria-label</code><span
-              class="italic"> qui est prioritaire ici...</span>
-            </p>
+          <div class="columns-2">
+            <div>
+              <img src="img_slide/images-img-battlestar-galactica.png"
+                alt="Image issue de Battlestar Galactica réinterprétant le dernier repas du Christ permettant d'illustrer une bonne et une mauvaise utilisation de l'attribut alt">
+            </div>
+
+            <div>
+              <p class="ko">Non-conforme</p>
+              <pre>
+<code>&lt;img width="654" height="368" src="https://.../3586585.jpg"&gt;</code></pre>
+              <a class="small italic" href="https://www.allocine.fr/article/fichearticle_gen_carticle=18684283.html">Source</a>
+
+
+              <p class="ok spacer-top">Conforme</p>
+              <pre>
+<code>&lt;img
+  alt="La scène de la Cène revisitée avec une femme robot au centre, une image emblématique de «Battlestar Galactica». — © SyFy"
+  title="La scène de la Cène revisitée avec une femme robot au centre, une image emblématique de «Battlestar Galactica». — © SyFy"
+  src="https://.../c6cd71d0-66c1-4bfc-b47f-46ea880cca61/small"&gt;
+</code></pre>
+              <a class="small italic" href="https://www.letemps.ch/culture/ecrans/battlestar-galactica-serie-quil-faut-2023">Source</a>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="images-meaningful-3" class="slide large">
+      <section id="images-meaningful-alt-jordan-dunk-contest-1988" class="slide large">
         <div class="align-top">
           <h2>Images porteuses d'information <span class="wcag-level">[A]</span></h2>
           <div class="rgaa-details">
@@ -1558,15 +1573,35 @@
             </ul>
           </div>
 
-          <div>
-            <p class="ok">Conforme</p>
-            <img src="img_slide/images-img-alt-ok-2.png" alt="Image avec une bonne utilisation de l'attribut alt">
-            <img src="img_slide/images-img-alt-ok.png" alt="Une autre image avec une bonne utilisation de l'attribut alt">
+          <div class="columns-2">
+            <div>
+              <img src="img_slide/images-img-jordan-dunk-contest-1988.png"
+                alt="Image iconique de Michael Jordan lors du concours de dunk 1988 permettant d'illustrer une bonne et une mauvaise utilisation de l'attribut alt">
+            </div>
+
+            <div>
+              <p class="ko">Non-conforme</p>
+              <pre>
+<code>&lt;img
+  alt="Aucune description de photo disponible."
+  src="https://...7927516228250238976_n.jpg"&gt;</code></pre>
+              <a class="small italic"
+                href="https://www.facebook.com/photo.php?fbid=3775538312463855&id=1233791623305216&set=a.1369724083045302">Source</a>
+
+
+              <p class="ok spacer-top">Conforme</p>
+              <pre>
+<code>&lt;img
+  alt="To this day, people still talk about the 1988 NBA Dunk Contest, a memorable duel between Jordan and Dominique Wilkins. The two went tit-for-tat in the finals, with both scoring a pair of perfect 50s. In the end, it was Jordan — with the support of the hometown Chicago crowd — clinching back-to-back dunk titles."
+  src="https://.../200418150857-17-jordan-gallery-restricted.jpg"&gt;
+</code></pre>
+              <a class="small italic" href="https://edition.cnn.com/2013/07/03/us/michael-jordan-fast-facts">Source</a>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="images-meaningful-4" class="slide large">
+      <section id="images-meaningful-happy-at-work" class="slide large">
         <div class="align-top">
           <h2>Images porteuses d'information <span class="wcag-level">[A]</span></h2>
           <div class="rgaa-details">
@@ -1582,15 +1617,36 @@
             </ul>
           </div>
 
-          <div>
-            <p class="ok">Conforme</p>
-            <img src="img_slide/images-img-alt-ok-3.png" alt="Image avec une bonne utilisation de l'attribut alt">
-            <!-- Source: https://www.letemps.ch/culture/ecrans/battlestar-galactica-serie-quil-faut-2023 -->
+          <div class="columns-2">
+            <div class="align-top">
+              <p>Cas des images contenant du texte :</p>
+              <div class="center spacer-top">
+                <img src="img_slide/images-img-happy-at-work.png"
+                  alt="Logo Happy at work contenant du texte et permettant d'illustrer une bonne et une mauvaise utilisation de l'attribut alt">
+              </div>
+            </div>
+
+            <div>
+              <p class="ko">Non-conforme</p>
+              <pre>
+<code>&lt;img
+  alt="Pastille_Happy_Work_2023"
+  src="https://.../Pastille_Happy_Work_2023.gif"&gt;</code></pre>
+              <p>Perte d'information entre l'image et l'attribut <code>alt</code></p>
+              <a class="small italic" href="https://www.neosoft.fr/">Source</a>
+
+              <pre>
+<code>&lt;img
+  alt="Pastille Happy at Work - ESN labellisée depuis 2018"
+  aria-label="Logo"
+  src="https://.../Pastille_Happy_Work_2023.gif"&gt;</code></pre>
+              <p><code>alt</code> OK, mais masqué par <code>aria-label</code> non pertinent</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="images-meaningful-5" class="slide large">
+      <section id="images-meaningful-happy-at-work-2" class="slide large">
         <div class="align-top">
           <h2>Images porteuses d'information <span class="wcag-level">[A]</span></h2>
           <div class="rgaa-details">
@@ -1606,15 +1662,34 @@
             </ul>
           </div>
 
-          <div>
-            <p class="ko">Non-conforme</p>
-            <img src="img_slide/images-svg-aria-label-ko.png" alt="SVG sans nom accessible">
-            <!-- Source : https://www.neosoft.fr/pourquoi-rejoindre-neosoft/ -->
+          <div class="columns-2">
+            <div class="align-top">
+              <p>Cas des images contenant du texte :</p>
+              <div class="center spacer-top">
+                <img src="img_slide/images-img-happy-at-work.png"
+                  alt="Logo Happy at work contenant du texte et permettant d'illustrer une bonne et une mauvaise utilisation de l'attribut alt">
+              </div>
+            </div>
+
+            <div>
+              <p class="ok">Conforme</p>
+              <pre>
+<code>&lt;img
+  alt="Pastille Happy at Work - ESN labellisée depuis 2018"
+  src="https://.../Pastille_Happy_Work_2023.gif"&gt;</code></pre>
+
+              <pre>
+<code>&lt;img
+  alt="Logo"
+  aria-label="Pastille Happy at Work - ESN labellisée depuis 2018"
+  src="https://.../Pastille_Happy_Work_2023.gif"&gt;</code></pre>
+              <p><code>alt</code> peu pertinent, mais masqué par <code>aria-label</code> pertinent</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="images-meaningful-6" class="slide large">
+      <section id="images-meaningful-pacte-neosoft" class="slide large">
         <div class="align-top">
           <h2>Images porteuses d'information <span class="wcag-level">[A]</span></h2>
           <div class="rgaa-details">
@@ -1630,9 +1705,34 @@
             </ul>
           </div>
 
-          <div>
-            <p class="ok">Conforme</p>
-            <img src="img_slide/images-svg-aria-label-ok.png" alt="SVG avec un nom accessible">
+          <div class="columns-2">
+            <div class="align-top">
+              <p>Cas des images contenant du texte :</p>
+              <div class="center spacer-top">
+                <img src="img_slide/images-svg-pacte.png"
+                  alt="SVG Le pacte de Néosoft contenant du texte et permettant d'illustrer une bonne et une mauvaise utilisation de l'attribut aria-label">
+              </div>
+            </div>
+
+            <div>
+              <p class="ko">Non-conforme</p>
+              <pre>
+<code>&lt;svg
+  width="1300" height="600" viewBox="0 0 1300 600" fill="none"
+  xmlns="http://www.w3.org/2000/svg"&gt;
+  ...
+&lt;/svg&gt;</code></pre>
+              <a class="small italic" href="https://www.neosoft.fr/pourquoi-rejoindre-neosoft/">Source</a>
+
+              <p class="ok spacer-top">Conforme</p>
+              <pre>
+<code>&lt;svg
+  width="1300" height="600" viewBox="0 0 1300 600" fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-label="Le pacte Néosoft représente les 5 valuers mises en avant : P pour proximité, A pour accompagnement, C pour collectif, T pour technophile, E pour engagement"&gt;
+  ...
+&lt;/svg&gt;</code></pre>
+            </div>
           </div>
         </div>
       </section>
@@ -1720,6 +1820,43 @@
               <p class="ko">Non-conforme</p>
               <img src="img_slide/images-img-decorative-alt-ko.png" alt="Image décorative KO">
               <!-- Source : https://www.neosoft.fr/nos-expertises/conseil-agilite/ -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TODO : transformer ça en quiz avec réponse affichée après coup... -->
+      <section id="images-meaningless-neighbour" class="slide large">
+        <div class="align-top">
+          <h2>Images porteuses d'information <span class="wcag-level">[A]</span></h2>
+          <div class="rgaa-details">
+            <span>RGAA</span>
+            <span class="rgaa-thematic">1. Images</span>
+            <ul class="rgaa-ref">
+              <li>
+                <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#1.1">1.1 [A]</a>
+              </li>
+              <li>
+                <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#1.3">1.3 [A]</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="columns-2">
+            <div class="center">
+              <img src="img_slide/images-img-neighbour.png"
+                alt="Image contenant du texte stylisé et permettant d'illustrer une bonne utilisation de l'attribut alt">
+            </div>
+
+            <div>
+              <p class="ko spacer-top">Non-conforme</p>
+              <pre>
+<code>&lt;img
+  alt="connais tu ton voisin, neosoft"
+  src="https://.../Neosoft_Connais-tu-ton-voisin_Alexandre_Timothe-750x422.jpg"&gt;</code></pre>
+              <p><strong>Le contexte</strong> de la card est suffisant</p>
+              <p>L'image est donc considérée comme <strong>décorative</strong></p>
+              <p>=> <code>alt</code> doit être vide</p>
             </div>
           </div>
         </div>
