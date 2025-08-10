@@ -1486,36 +1486,42 @@
             </ul>
           </div>
 
-          <p><b>Définition : </b>Image qui véhicule une information <strong>nécessaire à la compréhension</strong> du contenu auquel elle
-            est associée.</p>
-          <a href="https://accessibilite.numerique.gouv.fr/methode/glossaire/#image-porteuse-d-information">Définition RGAA complète</a>
+          <div class="columns-2">
+            <div class="align-top bg-light">
+              <p><b>Définition : </b>Image qui véhicule une information <strong>nécessaire à la compréhension</strong> du contenu auquel
+                elle
+                est associée.</p>
+              <a href="https://accessibilite.numerique.gouv.fr/methode/glossaire/#image-porteuse-d-information">Définition RGAA complète</a>
 
-          <p class="spacer-top">Doit avoir une <strong>alternative textuelle</strong> (aussi appelée "<strong>nom accessible</strong>")</p>
+              <p class="spacer-top">Doit avoir une <strong>alternative textuelle</strong> (aussi appelée "<strong>nom accessible</strong>")
+              </p>
 
-          <div class="spacer-top-small columns-2">
-            <div class="align-top">
-              <p><b>Pour les balises <code>img</code> :</b></p>
-              <ul>
-                <li><code>aria-labelledby</code></li>
-                <li><code>aria-label</code></li>
-                <li><code>alt</code> (à privilégier car supportée par le plus de TA)</li>
-                <li><code>title</code></li>
-              </ul>
+              <p class="spacer-top"><a
+                href="https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/img#%C3%A9crire_des_descriptions_alternatives_significatives">Choisir
+                une description utile</a></p>
             </div>
 
-            <div class="align-top">
-              <p><b>Pour les <code>svg</code> :</b></p>
-              <ul>
-                <li><strong>DOIT</strong> absolument avoir l'attribut <code>role="img"</code></li>
-                <li><code>aria-labelledby</code></li>
-                <li><code>aria-label</code></li>
-              </ul>
+            <div>
+              <div>
+                <p><b>Pour les balises <code>img</code> :</b></p>
+                <ul>
+                  <li><code>aria-labelledby</code></li>
+                  <li><code>aria-label</code></li>
+                  <li><code>alt</code> (à privilégier car supportée par le plus de TA)</li>
+                  <li><code>title</code></li>
+                </ul>
+              </div>
+
+              <div class="spacer-top">
+                <p><b>Pour les <code>svg</code> :</b></p>
+                <ul>
+                  <li><strong>DOIT</strong> avoir l'attribut <code>role="img"</code></li>
+                  <li><code>aria-labelledby</code></li>
+                  <li><code>aria-label</code></li>
+                </ul>
+              </div>
             </div>
           </div>
-
-          <p class="spacer-top-small"><a
-            href="https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/img#%C3%A9crire_des_descriptions_alternatives_significatives">Choisir
-            une description utile</a></p>
         </div>
       </section>
 
