@@ -634,7 +634,9 @@
                 </ul>
               </li>
             </ul>
-            <ul class="spacer-top">
+
+            <p class="spacer-top">Caractéristiques du titre :</p>
+            <ul>
               <li><strong>Pertinent</strong></li>
               <li>De préférence <strong>unique</strong> (permet de retrouver la page dans l'historique de navigation)</li>
               <li>Donne le <strong>contexte</strong> de la page
@@ -890,6 +892,8 @@
                 </li>
               </ul>
             </div>
+
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles" target="_blank">Source</a></p>
           </div>
 
           <img src="./img_slide/document-structure-2.png" alt="Exemple d'une structure de page prise sur developer.mozilla.org">
@@ -1520,6 +1524,10 @@
                   <li><code>aria-label</code></li>
                 </ul>
               </div>
+
+              <p class="spacer-top">
+                <a href="https://accessibilite.numerique.gouv.fr/methode/glossaire/#alternative-textuelle-image">Liste complète des
+                  critères</a></p>
             </div>
           </div>
         </div>
@@ -1551,7 +1559,8 @@
               <p class="ko">Non-conforme</p>
               <pre>
 <code>&lt;img width="654" height="368" src="https://.../3586585.jpg"&gt;</code></pre>
-              <a class="small italic" href="https://www.allocine.fr/article/fichearticle_gen_carticle=18684283.html">Source</a>
+              <a class="small italic" href="https://www.allocine.fr/article/fichearticle_gen_carticle=18684283.html"
+                target="_blank">Source</a>
 
 
               <p class="ok spacer-top">Conforme</p>
@@ -1561,7 +1570,8 @@
   title="La scène de la Cène revisitée avec une femme robot au centre, une image emblématique de «Battlestar Galactica». — © SyFy"
   src="https://.../c6cd71d0-66c1-4bfc-b47f-46ea880cca61/small"&gt;
 </code></pre>
-              <a class="small italic" href="https://www.letemps.ch/culture/ecrans/battlestar-galactica-serie-quil-faut-2023">Source</a>
+              <a class="small italic" href="https://www.letemps.ch/culture/ecrans/battlestar-galactica-serie-quil-faut-2023"
+                target="_blank">Source</a>
             </div>
           </div>
         </div>
@@ -1596,7 +1606,7 @@
   alt="Aucune description de photo disponible."
   src="https://...7927516228250238976_n.jpg"&gt;</code></pre>
               <a class="small italic"
-                href="https://www.facebook.com/photo.php?fbid=3775538312463855&id=1233791623305216&set=a.1369724083045302">Source</a>
+                href="https://www.facebook.com/photo.php?fbid=3775538312463855&id=1233791623305216&set=a.1369724083045302" target="_blank">Source</a>
 
 
               <p class="ok spacer-top">Conforme</p>
@@ -1605,7 +1615,7 @@
   alt="To this day, people still talk about the 1988 NBA Dunk Contest, a memorable duel between Jordan and Dominique Wilkins. The two went tit-for-tat in the finals, with both scoring a pair of perfect 50s. In the end, it was Jordan — with the support of the hometown Chicago crowd — clinching back-to-back dunk titles."
   src="https://.../200418150857-17-jordan-gallery-restricted.jpg"&gt;
 </code></pre>
-              <a class="small italic" href="https://edition.cnn.com/2013/07/03/us/michael-jordan-fast-facts">Source</a>
+              <a class="small italic" href="https://edition.cnn.com/2013/07/03/us/michael-jordan-fast-facts" target="_blank">Source</a>
             </div>
           </div>
         </div>
@@ -1629,8 +1639,7 @@
 
           <div class="columns-2">
             <div class="align-top">
-              <p>Cas des images contenant du texte :</p>
-              <div class="center spacer-top">
+              <div class="center">
                 <img src="img_slide/images-img-happy-at-work.png"
                   alt="Logo Happy at work contenant du texte et permettant d'illustrer une bonne et une mauvaise utilisation de l'attribut alt">
               </div>
@@ -1643,7 +1652,7 @@
   alt="Pastille_Happy_Work_2023"
   src="https://.../Pastille_Happy_Work_2023.gif"&gt;</code></pre>
               <p>Perte d'information entre l'image et l'attribut <code>alt</code></p>
-              <a class="small italic" href="https://www.neosoft.fr/">Source</a>
+              <a class="small italic" href="https://www.neosoft.fr/" target="_blank">Source</a>
 
               <pre>
 <code>&lt;img
@@ -1674,8 +1683,7 @@
 
           <div class="columns-2">
             <div class="align-top">
-              <p>Cas des images contenant du texte :</p>
-              <div class="center spacer-top">
+              <div class="center">
                 <img src="img_slide/images-img-happy-at-work.png"
                   alt="Logo Happy at work contenant du texte et permettant d'illustrer une bonne et une mauvaise utilisation de l'attribut alt">
               </div>
@@ -1717,8 +1725,7 @@
 
           <div class="columns-2">
             <div class="align-top">
-              <p>Cas des images contenant du texte :</p>
-              <div class="center spacer-top">
+              <div class="center">
                 <img src="img_slide/images-svg-pacte.png"
                   alt="SVG Le pacte de Néosoft contenant du texte et permettant d'illustrer une bonne et une mauvaise utilisation de l'attribut aria-label">
               </div>
@@ -1732,7 +1739,7 @@
   xmlns="http://www.w3.org/2000/svg"&gt;
   ...
 &lt;/svg&gt;</code></pre>
-              <a class="small italic" href="https://www.neosoft.fr/pourquoi-rejoindre-neosoft/">Source</a>
+              <a class="small italic" href="https://www.neosoft.fr/pourquoi-rejoindre-neosoft/" target="_blank">Source</a>
 
               <p class="ok spacer-top">Conforme</p>
               <pre>
@@ -1760,20 +1767,40 @@
             </ul>
           </div>
 
-          <p><b>Définition : </b>Image n’ayant aucune fonction et ne véhiculant aucune information particulière par rapport au contenu
-            auquel elle est associée.</p>
-          <a href="https://accessibilite.numerique.gouv.fr/methode/glossaire/#image-de-decoration">Définition RGAA complète</a>
+          <div class="columns-2">
+            <div class="align-top bg-light">
+              <p><b>Définition : </b>Image n’ayant <strong>aucune fonction et ne véhiculant aucune information</strong> particulière par
+                rapport au contenu auquel elle est associée.</p>
+              <a href="https://accessibilite.numerique.gouv.fr/methode/glossaire/#image-de-decoration">Définition RGAA complète</a>
 
-          <p class="spacer-top"><b>Pour les <code>img</code> :</b></p>
-          <ul>
-            <li><code>alt</code> vide</li>
-            <li><strong>OU</strong> <code>aria-hidden="true"</code></li>
-            <li><strong>OU</strong> <code>role="presentation"</code></li>
-            <li>
-              <strong>ET aucun</strong> autre attribut permettant de fournir une <strong>alternative textuelle</strong>
-              (<code>aria-label</code>, <code>aria-labelledby</code>, <code>title</code>)
-            </li>
-          </ul>
+              <p class="spacer-top"><strong>Ne doit pas avoir d'alternative textuelle</strong> (aussi appelée "<strong>nom
+                accessible</strong>")
+            </div>
+
+            <div>
+              <p><b>Pour les <code>img</code> :</b></p>
+              <ul>
+                <li><code>alt</code> <strong>vide</strong></li>
+                <li><strong>OU</strong> <code>aria-hidden="true"</code></li>
+                <li><strong>OU</strong> <code>role="presentation"</code></li>
+                <li>
+                  <strong>ET aucun</strong> autre attribut permettant de fournir une <strong>alternative textuelle</strong>
+                  (<code>aria-label</code>, <code>aria-labelledby</code>, <code>title</code>)
+                </li>
+              </ul>
+
+              <p class="spacer-top"><b>Pour les <code>svg</code> :</b></p>
+              <ul>
+                <li><strong>PAS</strong> d'attribut <code>role="img"</code></li>
+                <li><code>aria-hidden="true"</code></li>
+                <li><strong>ET</strong> pas de balises <code>title</code> ni <code>desc</code></li>
+                <li>
+                  <strong>ET aucun</strong> autre attribut permettant de fournir une <strong>alternative textuelle</strong>
+                  (<code>aria-label</code>, <code>aria-labelledby</code>, <code>title</code>)
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -1790,20 +1817,32 @@
             </ul>
           </div>
 
-          <p><b>Définition : </b>Image n’ayant aucune fonction et ne véhiculant aucune information particulière par rapport au contenu
-            auquel elle est associée.</p>
-          <a href="https://accessibilite.numerique.gouv.fr/methode/glossaire/#image-de-decoration">Définition RGAA complète</a>
+          <div class="columns-2">
+            <div>
+              <img src="img_slide/images-img-decorative-ko.png" height="350px"
+                alt="Image décorative avec un alt permettant d'illustrer une mauvaise utilisation de l'attribut alt">
+              <p class="ko">Non-conforme</p>
+              <pre>
+<code>&lt;img
+  width="800" height="855"
+  src="https://.../header-agile-800x855.jpg"
+  alt="header-conseil-agilite"&gt;</code></pre>
+              <a class="small italic" href="https://www.neosoft.fr/nos-expertises/conseil-agilite/" target="_blank">Source</a>
+            </div>
 
-          <p class="spacer-top"><b>Pour les SVG :</b></p>
-          <ul>
-            <li><strong>PAS</strong> d'attribut <code>role="img"</code></li>
-            <li><code>aria-hidden="true"</code></li>
-            <li><strong>ET</strong> pas de balises <code>title</code> ni <code>desc</code></li>
-            <li>
-              <strong>ET aucun</strong> autre attribut permettant de fournir une <strong>alternative textuelle</strong>
-              (<code>aria-label</code>, <code>aria-labelledby</code>, <code>title</code>)
-            </li>
-          </ul>
+            <div>
+              <img src="img_slide/images-img-decorative-ok.png" alt="Image décorative correcte (sans nom accessible)" height="350px">
+
+              <p class="ok">Conforme</p>
+              <pre>
+<code>&lt;img
+  width="422" height="158"
+  src="https://.../MicrosoftTeams-image-33.jpg"
+  alt=""&gt;
+</code></pre>
+              <a class="small italic" href="https://www.neosoft.fr/nos-expertises/conseil-agilite/" target="_blank">Source</a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -1821,52 +1860,86 @@
           </div>
 
           <div class="columns-2">
+            <img src="img_slide/images-svg-angular.png"
+              alt="Image décorative SVG correcte (sans nom accessible)">
+
             <div>
               <p class="ok">Conforme</p>
-              <img src="img_slide/images-img-decorative-alt-ok.png" alt="Image décorative OK">
-              <!-- Source : https://www.neosoft.fr/nos-expertises/conseil-agilite/ -->
-            </div>
-            <div>
-              <p class="ko">Non-conforme</p>
-              <img src="img_slide/images-img-decorative-alt-ko.png" alt="Image décorative KO">
-              <!-- Source : https://www.neosoft.fr/nos-expertises/conseil-agilite/ -->
+              <pre>
+<code>&lt;a href="/docs"&gt;
+  &lt;svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg"&gt;
+    ...
+  &lt;/svg&gt;
+  &lt;span&gt;Docs&lt;/span&gt;
+&lt;/a&gt;</code></pre>
+              <a class="small italic" href="https://angular.dev/" target="_blank">Source</a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- TODO : transformer ça en quiz avec réponse affichée après coup... -->
-      <section id="images-meaningless-neighbour" class="slide large">
+      <section id="images-quiz" class="slide large">
         <div class="align-top">
-          <h2>Images porteuses d'information <span class="wcag-level">[A]</span></h2>
-          <div class="rgaa-details">
-            <span>RGAA</span>
-            <span class="rgaa-thematic">1. Images</span>
-            <ul class="rgaa-ref">
-              <li>
-                <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#1.1">1.1 [A]</a>
-              </li>
-              <li>
-                <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#1.3">1.3 [A]</a>
-              </li>
-            </ul>
-          </div>
+          <h2>QUIZ Images <span class="wcag-level">[A]</span></h2>
 
           <div class="columns-2">
             <div class="center">
-              <img src="img_slide/images-img-neighbour.png"
-                alt="Image contenant du texte stylisé et permettant d'illustrer une bonne utilisation de l'attribut alt">
+              <div>
+                <img src="img_slide/images-svg-facebook.png" alt="Image décorative ou pas ?">
+                <p><a class="small italic" href="https://www.instagram.com/" target="_blank">Source</a></p>
+              </div>
             </div>
 
             <div>
-              <p class="ko spacer-top">Non-conforme</p>
+              <p class="quiz">QUIZ : conforme ou pas ?</p>
+              <pre>
+<code>&lt;svg
+  aria-label="Se connecter avec Facebook"
+  role="img"
+  fill="currentColor" height="20" viewBox="0 0 16 16" width="20"&gt;
+  &lt;title&gt;Se connecter avec Facebook&lt;/title&gt;
+    ...
+  &lt;/svg&gt;</code></pre>
+              <div class="Cmasque">
+                <p>L'image n'apporte rien de plus que le label du bouton</p>
+                <p>L'image est donc considérée comme <strong>décorative</strong></p>
+                <ul>
+                  <li><code>aria-label</code> doit être vide</li>
+                  <li>Pas d'attribut <code>role="img"</code></li>
+                  <li>Pas de balise <code>title</code></li>
+                </ul>
+
+                <p class="Cmasque spacer-top-small"><b>Mais ça serait correct si le bouton n'avait pas de label...</b></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="images-text-neighbour" class="slide large">
+        <div class="align-top">
+          <h2>QUIZ Images <span class="wcag-level">[A]</span></h2>
+
+          <div class="columns-2">
+            <div class="center">
+              <img src="img_slide/images-img-neighbour.png" alt="Image contenant du texte stylisé">
+            </div>
+
+            <div>
+              <p class="quiz spacer-top">QUIZ : conforme ou pas ?</p>
               <pre>
 <code>&lt;img
   alt="connais tu ton voisin, neosoft"
   src="https://.../Neosoft_Connais-tu-ton-voisin_Alexandre_Timothe-750x422.jpg"&gt;</code></pre>
-              <p><strong>Le contexte</strong> de la card est suffisant</p>
-              <p>L'image est donc considérée comme <strong>décorative</strong></p>
-              <p>=> <code>alt</code> doit être vide</p>
+
+              <div class="Cmasque">
+                <p><strong>Le contexte</strong> de la card est suffisant</p>
+                <p>L'image est donc considérée comme <strong>décorative</strong></p>
+                <p><code>alt</code> doit être vide</p>
+                <p class="spacer-top Cmasque">De plus, ce genre d'image est lié au concept d'<strong>images texte</strong> que nous
+                  n'aborderons pas (cf <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#1.8">critère 1.8</a>)</p>
+              </div>
             </div>
           </div>
         </div>

@@ -48,7 +48,8 @@ body {
   }
 
   .ko,
-  .ok {
+  .ok,
+  .quiz {
     border-radius: 1rem;
     color: white;
     font-weight: bold;
@@ -62,6 +63,10 @@ body {
 
   .ok {
     background-color: green;
+  }
+
+  .quiz {
+    background-color: var(--neosoft-blue);
   }
 
   .slide.full-width {
