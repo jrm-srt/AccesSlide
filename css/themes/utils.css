@@ -61,6 +61,10 @@ body {
     background-color: red;
   }
 
+  .light {
+    font-weight: lighter;
+  }
+
   .ok {
     background-color: green;
   }
