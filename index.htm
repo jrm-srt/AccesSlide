@@ -2095,7 +2095,7 @@
         </div>
       </section>
 
-      <section id="colors-contrast" class="slide large">
+      <section id="colors-contrast-text" class="slide large">
         <div class="align-top">
           <h2>Contraste <span class="wcag-level">[AA]</span></h2>
           <div class="rgaa-details">
@@ -2108,7 +2108,7 @@
             </ul>
           </div>
 
-          <p>Règles sur le contraste pour les <strong>textes</strong> :</p>
+          <p>Pour les <strong>textes</strong> :</p>
 
           <div class="ratio-rules spacer-top">
             <p class="ratio">4.5</p>
@@ -2124,6 +2124,113 @@
               chevron_right
             </span>
             <p class="ratio">3</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="colors-contrast-interactive-elements" class="slide large">
+        <div class="align-top">
+          <h2>Contraste <span class="wcag-level">[AA]</span></h2>
+          <div class="rgaa-details">
+            <span>RGAA</span>
+            <span class="rgaa-thematic">3. Couleurs</span>
+            <ul class="rgaa-ref">
+              <li>
+                <a target="_blank" href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#3.3">3.3 [AA]</a>
+              </li>
+            </ul>
+          </div>
+
+          <p>Pour les <strong>composants graphiques ou interactifs</strong> :</p>
+
+          <div class="ratio-rules">
+            <p class="ratio">3</p>
+
+            <div class="columns-3">
+              <div>
+                <p>Quel que soit son état :</p>
+                <ul>
+                  <li>Normal</li>
+                  <li>Hover</li>
+                  <li>Focus</li>
+                  <li>Pressed</li>
+                  <li>Sauf l'état <strong>disabled</strong></li>
+                </ul>
+              </div>
+
+              <div>
+                <p>Ne concerne pas (entre-autre) :</p>
+                <ul>
+                  <li>Les éléments <strong>disabled</strong></li>
+                  <li>Les <strong>styles natifs du browser</strong></li>
+                  <li>Les logos / noms de marque</li>
+                </ul>
+              </div>
+
+              <div>
+                <p>Concerne :</p>
+                <ul>
+                  <li><strong>Tous les éléments</strong> du composant</li>
+                  <li>Les
+                    <strong>
+                      <a target="_blank"
+                        href="https://accessibilite.numerique.gouv.fr/methode/glossaire/#couleur-d-arriere-plan-contigue-et-couleur-contigue">
+                        couleurs contigües
+                      </a>
+                    </strong>
+                  </li>
+                  <li>Les
+                    <strong>
+                      <a target="_blank"
+                        href="https://accessibilite.numerique.gouv.fr/methode/glossaire/#couleur-d-arriere-plan-contigue-et-couleur-contigue">
+                        couleurs d'arrière-plan contigües
+                      </a>
+                    </strong>
+                  </li>
+                  <li>Tous les <strong>styles surchargés</strong> (par exemple, outline à la prise de focus)</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="colors-contrast-help" class="slide large">
+        <div class="columns-2">
+          <div class="align-top">
+            <h2>Contraste <span class="wcag-level">[AA]</span></h2>
+            <div class="rgaa-details">
+              <span>RGAA</span>
+              <span class="rgaa-thematic">3. Couleurs</span>
+              <ul class="rgaa-ref">
+                <li>
+                  <a target="_blank" href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#3.2">3.2 [AA]</a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#3.3">3.3 [AA]</a>
+                </li>
+              </ul>
+            </div>
+
+            <p><b>Quelques outils utiles :</b></p>
+            <ul>
+              <li>DevTools Chrome / Firefox
+                <ul>
+                  <li>Emulate reduced contrast</li>
+                  <li>Color picker</li>
+                  <li>Recherche de problème de contraste (Firefox)</li>
+                </ul>
+              </li>
+              <li>WCAG Contrast Checker (
+                <a target="_blank"
+                  href="https://chromewebstore.google.com/detail/wcag-color-contrast-check/plnahcmalebffmaghcpcmpaciebdhgdf">Chrome</a>
+                /
+                <a target="_blank" href="https://addons.mozilla.org/en-US/firefox/addon/wcag-contrast-checker/">Firefox</a>
+                )
+              </li>
+              <li><a target="_blank" href="https://www.tpgi.com/color-contrast-checker/">Colour Contrast Analyzer</a></li>
+            </ul>
           </div>
         </div>
       </section>
