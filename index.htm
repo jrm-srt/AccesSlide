@@ -2114,14 +2114,15 @@
             </ul>
           </div>
 
-          <p>Pour les <strong>composants graphiques ou interactifs</strong> :</p>
+          <p>Pour les <strong><a target="_blank" href="https://accessibilite.numerique.gouv.fr/methode/glossaire/#composant-d-interface">composants
+            graphiques ou interactifs</a></strong> :</p>
 
           <div class="ratio-rules">
             <p class="ratio">3</p>
 
             <div class="columns-3">
               <div>
-                <p>Quel que soit son état :</p>
+                <p><b>Quel que soit son état :</b></p>
                 <ul>
                   <li>Normal</li>
                   <li>Hover</li>
@@ -2132,7 +2133,7 @@
               </div>
 
               <div>
-                <p>Ne concerne pas (entre-autre) :</p>
+                <p><b>Ne concerne pas (entre-autre) :</b></p>
                 <ul>
                   <li>Les éléments <strong>disabled</strong></li>
                   <li>Les <strong>styles natifs du browser</strong></li>
@@ -2141,7 +2142,7 @@
               </div>
 
               <div>
-                <p>Concerne :</p>
+                <p><b>Concerne :</b></p>
                 <ul>
                   <li><strong>Tous les éléments</strong> du composant</li>
                   <li>Les
@@ -2208,13 +2209,29 @@
         </div>
       </section>
 
-      <section id="colors-contrast-Quiz" class="slide large">
-        <div class="columns-2">
+      <section id="colors-contrast-quiz" class="slide large">
+        <div>
           <div class="align-top">
             <h2>Contraste <span class="wcag-level">[AA]</span></h2>
 
-            <p><b>QUIZ</b></p>
-            TODO...
+            <p class="quiz">QUIZ : conforme ou pas ?</p>
+
+            <div>
+              <section class="equipe spacer-top">
+                <p class="btn-equipe purple">Mondiaux athlé</p>
+                <p class="Cmasque"><span class="ko">Non-conforme</span> contraste insuffisant</p>
+
+                <p class="btn-equipe orange">CM rugby (f)</p>
+                <p class="Cmasque"><span class="ok">Conforme</span></p>
+
+                <p class="btn-equipe gray">rugby</p>
+                <p class="Cmasque"><span class="ko">Non-conforme</span> contraste insuffisant quand <b>hover</b></p>
+
+                <p><a target="_blank" href="https://www.lequipe.fr/">Source</a></p>
+
+                <p class="note Cmasque">Pire... Le bouton "s'abonner" qui prend une couleur non-accessible via JS ???</p>
+              </section>
+            </div>
           </div>
         </div>
       </section>

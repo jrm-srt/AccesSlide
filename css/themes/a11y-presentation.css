@@ -608,4 +608,54 @@ body {
       align-self: start;
     }
   }
+
+  #colors-contrast-quiz {
+    .equipe {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: auto 1fr;
+    }
+
+    /* Retrieved from https://www.lequipe.fr */
+
+    .btn-equipe {
+      border-radius: 3rem;
+      border-style: solid;
+      border-width: 1px;
+      display: flex;
+      font-size: 1.25rem;
+      /*font-weight: bold;*/
+      grid-column: 1;
+      height: fit-content;
+      padding: 0.5rem 1.5rem;
+      width: fit-content;
+
+      &.purple {
+        background-color: rgb(237, 232, 242);
+        border-color: rgb(216, 204, 227);
+        color: rgb(133, 110, 153);
+      }
+
+      &.orange {
+        background-color: rgb(250, 229, 209);
+        border-color: rgb(244, 198, 154);
+        color: rgb(138, 76, 16);
+      }
+
+      &.gray {
+        background-color: #fff;
+        border-color: #ccc;
+        color: #777474;
+
+        &:hover {
+          color: #979797;
+        }
+      }
+    }
+
+    .note {
+      grid-column: 1 / span 2;
+      grid-row: 5;
+    }
+  }
 }
