@@ -501,6 +501,10 @@ body {
   }
 
   #navigation-skip-link-angular {
+    ul {
+      justify-self: start;
+    }
+
     pre {
       margin-block: 0.5rem 1rem;
     }

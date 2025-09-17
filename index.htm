@@ -1030,7 +1030,7 @@
       </section>
 
       <section id="navigation-skip-link-angular" class="slide large">
-        <div class="columns-2">
+        <div>
           <div class="align-top">
             <h2>Lien d'accès rapide <span class="wcag-level">[A]</span></h2>
             <div class="rgaa-details">
@@ -1042,44 +1042,17 @@
                 </li>
               </ul>
             </div>
-            <p>En <strong>angular</strong>, si on a du <strong>Routing</strong>, c'est un peu plus compliqué</p>
+
+            <p>En <strong>angular</strong>, si on a du <strong>Routing</strong>, c'est un peu différent :</p>
             <ul>
               <li>
-                <span>Activer l'option <code>&lt;anchorScrolling&gt;</code> du Router</span>
-                <pre><code>provideRouter(routes, withInMemoryScrolling({anchorScrolling: 'enabled'}))</code></pre>
+                <span>Activer l'option <code>anchorScrolling</code> du Router</span>
+                <pre><code>provideRouter(routes, withInMemoryScrolling({ anchorScrolling: 'enabled' }))</code></pre>
               </li>
               <li>
                 <span>Le lien dans le template</span>
-                <pre><code>&lt;a class="skip-link" [routerLink]="currentUrl()" fragment="main"&gt;Skip to main content&lt;/a&gt;</code></pre>
+                <pre><code>&lt;a class="skip-link" [routerLink]="[]" fragment="main"&gt;Skip to main content&lt;/a&gt;</code></pre>
                 <pre><code>&lt;main id="main" role="main" tabindex="-1"&gt;</code></pre>
-              </li>
-            </ul>
-          </div>
-
-          <div class="full-height">
-            <ul>
-              <li>
-                <span>Récupérer l'URL courante auprès du Router et supprimer le fragment potentiellement présent</span>
-                <pre><code>  private readonly router = inject(Router);
-  protected readonly currentUrl = toSignal(this.router.events.pipe(
-    filter(event => event instanceof NavigationEnd),
-    map((event) => {
-      const anchorRegExp = /^([^#]*)(#.*)*$/;
-      const matches = event.url.match(anchorRegExp);
-      return matches?.[1] ?? '';
-    }),
-  ));</code></pre>
-              </li>
-              <li>
-                <span>Ou avec le <strong>RouterStore ngRx</strong></span>
-                <pre><code>protected readonly currentUrl = toSignal(this.store.select(selectUrl).pipe(
-    filter((url) => !!url),
-    map((url) => {
-      const anchorRegExp = /^([^#]*)(#.*)*$/;
-      const matches = url.match(anchorRegExp);
-      return matches?.[1] ?? '';
-    }),
-    takeUntilDestroyed(this.destroyRef)));</code></pre>
               </li>
             </ul>
           </div>
