@@ -622,8 +622,36 @@ body {
         text-transform: uppercase;
       }
 
-      &.dark span:not(.result) {
+      .dark span:not(.result) {
         color: #000000;
+      }
+    }
+
+    .equipe {
+      background-color: rgb(255, 187, 0);
+      padding-block: 1rem;
+
+      button {
+        justify-self: center;
+        background-color: rgb(29, 29, 27);
+        border: none;
+        border-radius: 32px;
+        box-sizing: border-box;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        display: block;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18px;
+        padding: 12px 24px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+
+        &:hover {
+          color: rgb(87, 87, 86);
+          opacity: 0.85;
+        }
       }
     }
   }
