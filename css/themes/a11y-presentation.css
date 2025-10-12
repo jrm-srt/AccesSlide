@@ -655,4 +655,12 @@ body {
       }
     }
   }
+
+  #colors-contrast-info {
+    .examples {
+      align-items: start;
+      gap: 3rem;
+      grid-template-columns: auto 1fr;
+    }
+  }
 }
