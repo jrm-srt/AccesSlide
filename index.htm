@@ -2429,6 +2429,178 @@
 
       <section class="slide">
         <div class="transition">
+          <h2>Formulaires</h2>
+        </div>
+      </section>
+
+      <section id="forms-labels" class="slide large">
+        <div>
+          <div class="align-top">
+            <h2>Labels <span class="wcag-level">[A] - [AA]</span></h2>
+            <div class="rgaa-details">
+              <span>RGAA</span>
+              <span class="rgaa-thematic">Formulaires</span>
+              <ul class="rgaa-ref">
+                <li>
+                  <a target="_blank" href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#11.1"> 11.1 [A]</a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#11.2"> 11.2 [A]</a>
+                </li>
+              </ul>
+            </div>
+
+            <p>Chaque champ de formulaire doit avoir un label (nom accessible)</p>
+            <ul>
+              <li><code>aria-labelledby</code></li>
+              <li><code>aria-label</code></li>
+              <li><code>label</code> avec attribut <code>for</code> (<b>méthode à privilégier</b>)</li>
+              <li><code>title</code></li>
+              <li><b>Bouton adjacent</b> qui lui fournit une étiquette visible + nom accessible (mais pas forcément visible)</li>
+            </ul>
+
+            <p class="spacer-top">Avec <strong>Angular Material</strong>, <code>mat-label</code> dans un <code>mat-form-field</code> crée
+              automatiquement un <code>label + for</code></p>
+
+            <p><strong class="warning">ATTENTION !</strong> Un <code>placeholder</code> ne vaut pas comme un nom accessible</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="forms-labels-visible-name" class="slide large">
+        <div>
+          <div class="align-top">
+            <h2>Labels <span class="wcag-level">[A] - [AA]</span></h2>
+            <div class="rgaa-details">
+              <span>RGAA</span>
+              <span class="rgaa-thematic">Formulaires</span>
+              <ul class="rgaa-ref">
+                <li>
+                  <a target="_blank" href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#11.1"> 11.1 [A]</a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#11.2"> 11.2 [A]</a>
+                </li>
+              </ul>
+            </div>
+
+            <p>Si le label n'est <b>pas visible</b>, il faut fournir un intitulé visible en plus</p>
+            <p>Cf critère <a target="_blank" href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#11.1.3">11.1.3</a></p>
+
+            <div class="center">
+              <img src="./img_slide/form-label-for-hidden.png" alt="Exemple de manque d'intitulé visible">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="forms-labels-accessible-name-vs-visible-name" class="slide large">
+        <div>
+          <div class="align-top">
+            <h2>Labels <span class="wcag-level">[A] - [AA]</span></h2>
+            <div class="rgaa-details">
+              <span>RGAA</span>
+              <span class="rgaa-thematic">Formulaires</span>
+              <ul class="rgaa-ref">
+                <li>
+                  <a target="_blank" href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#11.1"> 11.1 [A]</a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#11.2"> 11.2 [A]</a>
+                </li>
+              </ul>
+            </div>
+
+            <p>Si présent, le <strong>nom accessible</strong> doit <b>au moins</b> contenir l'<strong>intitulé visible</strong>
+            </p>
+
+            <p class="spacer-top">Exceptions :</p>
+            <ul>
+              <li>Les symboles ("B" pour "Mettre en gras", ">" pour "Page suivante", etc)</li>
+              <li>La ponctuation</li>
+            </ul>
+
+            <p class="spacer-top">
+              <a target="_blank" href="https://access42.net/formulaires-etiquettes-label-accessibles/">Article Access42 sur les labels de
+                formulaires</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="forms-labels-consistency" class="slide large">
+        <div>
+          <div class="align-top">
+            <h2>Labels <span class="wcag-level">[AA]</span></h2>
+            <div class="rgaa-details">
+              <span>RGAA</span>
+              <span class="rgaa-thematic">Formulaires</span>
+              <ul class="rgaa-ref">
+                <li>
+                  <a target="_blank" href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#11.3"> 11.3 [A]</a>
+                </li>
+              </ul>
+            </div>
+
+            <p>Garder de la <strong>consistence</strong> pour les labels associés à des champs de formulaire ayant la même fonction et
+              répétés plusieurs fois dans une même page ou un ensemble de page</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="forms-labels-close-by" class="slide large">
+        <div>
+          <div class="align-top">
+            <h2>Labels <span class="wcag-level">[A]</span></h2>
+            <div class="rgaa-details">
+              <span>RGAA</span>
+              <span class="rgaa-thematic">Formulaires</span>
+              <ul class="rgaa-ref">
+                <li>
+                  <a target="_blank" href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#11.4"> 11.4 [A]</a>
+                </li>
+              </ul>
+            </div>
+
+            <p>Le label doit être <strong>accolé</strong> au champ de saisie</p>
+            <div class="center">
+              <img src="./img_slide/form-label-close-by.png" alt="Exemple de labels non-accolés">
+            </div>
+
+            <p class="center">
+              <a target="_blank" href="https://www.education.gouv.fr/contactez-nous-41633/category/taxonomy/term/392">Source</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="forms-fieldset" class="slide large">
+        <div>
+          <div class="align-top">
+            <h2><span lang="en">Fieldset</span> <span class="wcag-level">[A]</span></h2>
+            <div class="rgaa-details">
+              <span>RGAA</span>
+              <span class="rgaa-thematic">Formulaires</span>
+              <ul class="rgaa-ref">
+                <li>
+                  <a target="_blank" href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#11.5"> 11.5 [A]</a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#11.6"> 11.6 [A]</a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#11.7"> 11.7 [AA]</a>
+                </li>
+              </ul>
+            </div>
+
+            <p>TODO...</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide">
+        <div class="transition">
           <h2>TODO_Section_title</h2>
         </div>
       </section>
