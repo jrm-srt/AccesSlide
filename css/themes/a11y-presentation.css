@@ -663,4 +663,14 @@ body {
       grid-template-columns: auto 1fr;
     }
   }
+
+  #forms-labels-accessible-name-vs-visible-name {
+    .columns-2 {
+      grid-template-columns: 2fr 1fr;
+    }
+
+    img {
+      margin: auto auto auto auto;
+    }
+  }
 }

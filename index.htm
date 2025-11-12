@@ -2455,7 +2455,7 @@
               </ul>
             </div>
 
-            <p>Chaque champ de formulaire doit avoir un label (nom accessible)</p>
+            <p>Chaque champ de formulaire doit avoir un label (<strong>nom accessible</strong>)</p>
             <ul>
               <li><code>aria-labelledby</code></li>
               <li><code>aria-label</code></li>
@@ -2466,8 +2466,32 @@
 
             <p class="spacer-top">Avec <strong>Angular Material</strong>, <code>mat-label</code> dans un <code>mat-form-field</code> crée
               automatiquement un <code>label + for</code></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="forms-labels-placeholder" class="slide large">
+        <div>
+          <div class="align-top">
+            <h2>Labels <span class="wcag-level">[A] - [AA]</span></h2>
+            <div class="rgaa-details">
+              <span>RGAA</span>
+              <span class="rgaa-thematic">Formulaires</span>
+              <ul class="rgaa-ref">
+                <li>
+                  <a target="_blank" href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#11.1">11.1 [A]</a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#11.2">11.2 [A]</a>
+                </li>
+              </ul>
+            </div>
+
+            <p>Chaque champ de formulaire doit avoir un label (<strong>nom accessible</strong>)</p>
 
             <p><strong class="warning">ATTENTION !</strong> Un <code>placeholder</code> ne vaut pas comme un nom accessible</p>
+
+            <img class="spacer-top center" src="./img_slide/form-label-placeholder.png" alt="Exemple de nom accessible manquant mais avec placeholder">
           </div>
         </div>
       </section>
@@ -2516,22 +2540,35 @@
               </ul>
             </div>
 
-            <p>Si présent, le <strong>nom accessible</strong> doit <b>au moins</b> contenir l'<strong>intitulé visible</strong>
-            </p>
+            <div class="columns-2">
+              <section>
+                <p>Si présent, le <strong>nom accessible</strong> doit <b>au moins</b> contenir l'<strong>intitulé visible</strong>
+                </p>
 
-            <p class="spacer-top">Exceptions :</p>
-            <ul>
-              <li>Les symboles ("B" pour "Mettre en gras", ">" pour "Page suivante", etc)</li>
-              <li>La ponctuation</li>
-            </ul>
+                <p class="spacer-top">Exceptions :</p>
+                <ul>
+                  <li>Les symboles ("B" pour "Mettre en gras", ">" pour "Page suivante", etc)</li>
+                  <!--<li>Les symboles
+                    <ul>
+                      <li>"B" pour "Mettre en gras"</li>
+                      <li>">" pour "Page suivante"</li>
+                      <li>etc</li>
+                    </ul>
+                  </li>-->
+                  <li>La ponctuation</li>
+                </ul>
 
-            <p class="spacer-top">
-              <a target="_blank" href="https://access42.net/formulaires-etiquettes-label-accessibles/">Article Access42 sur les labels de
-                formulaires</a>
-            </p>
-            <p>
-              <a target="_blank" href="https://www.w3.org/TR/html-aam-1.0/#accessible-name-and-description-computation">Règles de calcul du nom accessible</a>
-            </p>
+                <p class="spacer-top">
+                  <a target="_blank" href="https://access42.net/formulaires-etiquettes-label-accessibles/">Article Access42 sur les labels de
+                    formulaires</a>
+                </p>
+                <p>
+                  <a target="_blank" href="https://www.w3.org/TR/html-aam-1.0/#accessible-name-and-description-computation">Règles de calcul du nom accessible</a>
+                </p>
+              </section>
+
+              <img src="./img_slide/form-label-visible-name.png" alt="Exemple d'incohérence entre nom accessible et nom visible">
+            </div>
           </div>
         </div>
       </section>
